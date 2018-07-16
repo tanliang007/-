@@ -1,0 +1,73 @@
+<!--pages/index/near-pites/index.wxml-->
+<view class='header'>
+  <view class='searcher'>
+    <span class='iconfont icon-search'></span>
+    <input class="search-hint" placeholder='请输入搜索内容' value="{{searchValue}}" bindinput="searchValueInput">{{searchRes}}</input>
+  </view>
+</view>
+<!--附近站点列表-->
+<block wx:if="!{{nonearsite}}">
+  <view class='{{item.online ? "manager" : "offlinemanager" }} ' wx:for="{{nearSiteList}}" wx:key="{{item.id}}" bindtap='navTositedetail' data-siteid="{{item.id}}" data-online="{{item.online}}" data-pileNo="{{item.pileNo}}" data-avaliable="{{item.avaliable}}"
+    data-distance="{{item.distance}}" data-needforge="{{item.needforge}}">
+    <!-- 'navTositedetail() 传递的参数和data-avaliable以后要删除' -->
+
+    <view class='manager-wrapper'>
+      <view class='top'>
+
+        <view class='area'>
+          <view class='name'>{{item.siteName}} </view>
+          <view class='wenfather'>
+            <span class="wen">桩号</span>{{item.pileNo}}</view>
+        </view>
+
+        <view class='distancefather' catchtap='navToSite' data-siteinfo="{{item}}">
+          <view class='rg-child'>
+            <view id='mjltest'>
+              <image src='{{ item.online ?"http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/navarrow.png" :"http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/offlinenavarrow.png"}}'></image>
+
+              <view class='distance'> {{item.distance}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='location'>
+        <span class="add">地址</span>{{item.address}}</view>
+      <view class='bot'>
+
+        <view>
+          <span class='kongxian'>
+            <!-- 造假数据  -->
+            <span></span> 空闲{{ item.avaliable }} 个
+          </span>
+          <span class='zaichong'>
+            <span></span> 共{{item.total}}个
+          </span>
+          <span class="pricestyle">{{item.price/100}}元/小时</span>
+        </view>
+
+        <view style="flex:0 0 {{item.activewidth + 'px'}};text-align:center;">
+          <view class='xinhao'>
+            <view class='signalbgc{{item.signal}}'></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="tips1">
+    <view class="refresh-block" wx:if="{{loading}}">
+      <image class='loadpng' animation="{{refreshAnimation}}" src="http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/loader.png"></image>
+    </view>
+    <view wx:if="{{hasMore}}" class='nocontent'>
+      <text>没有更多内容了</text>
+    </view>
+  </view>
+
+</block>
+
+<view wx:if="{{nonearsite}}">
+  <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nosite.png' style='width:300rpx;height:360rpx;margin:100rpx auto 70rpx auto;display:block; '></image>
+  <view style='text-align:center;color:#3dca76;font-size:32rpx;'>附近暂无充电桩</view>
+</view>

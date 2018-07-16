@@ -1,0 +1,8 @@
+{
+	"usingComponents": {
+		"register": "../../comps/register/index"
+	},
+	"navigationBarTitleText": "这有电",
+	"navigationBarTextStyle": "white",
+	"navigationBarBackgroundColor": "#24c771"
+}

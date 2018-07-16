@@ -1,0 +1,98 @@
+/* pages/mine/bonus/transfer/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.tipcontainer {
+  padding: 40rpx 0;
+  padding-left: 40rpx;
+  background: #fff;
+  margin: 20rpx 0;
+}
+
+.tipcontainer image {
+  width: 56rpx;
+  height: 42rpx;
+  margin-right: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tipcontainer .tlt {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 36rpx;
+  line-height: 45rpx;
+}
+
+.red {
+  color: #eb5150;
+  line-height: 60rpx;
+  height: 60rpx;
+  font-size: 27rpx;
+}
+
+.gray {
+  color: #c9c9c9;
+  line-height: 60rpx;
+  height: 60rpx;
+  font-size: 27rpx;
+}
+
+.inputtransfer {
+  padding-left: 40rpx;
+  background-color: #fff;
+}
+
+.transfer {
+  padding: 40rpx 0 40rpx 0rpx;
+  color: #333;
+  font-size: 36rpx;
+}
+
+.keytransfer {
+  display: flex;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f7f7f7;
+}
+
+.symbol {
+  font-size: 60rpx;
+  display: inline-block;
+  color: #333;
+  font-weight: bold;
+  align-self: center;
+  margin-right: 20rpx;
+}
+
+.keytransfer-input {
+  font-size: 60rpx;
+  color: #333;
+  height: 100rpx;
+  /* border-bottom: 2rpx solid #f7f7f7; */
+}
+
+.keyong {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+
+/*确定按钮  */
+
+.sure {
+  width: 80%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  margin-top: 90rpx;
+  border-radius: 80rpx;
+}
+
+.suredown {
+  position: relative;
+  top: 6rpx;
+}

@@ -1,0 +1,60 @@
+/* pages/index/here-service/index.wxss */
+
+.buttonfather {
+  width: 330rpx;
+  margin: 60rpx auto;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.button {
+  color: #23c772;
+  font-size: 32rpx;
+  border-radius: 40rpx;
+  border: 1px solid #21c775;
+  background: #fff;
+}
+
+.button::after {
+  border: none;
+  border-radius: 0;
+}
+
+/* 问题列表样式 */
+
+.ques {
+  font-size: 32rpx;
+  padding-left: 30rpx;
+}
+
+.manager {
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.askwrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  align-items: center;
+}
+
+.askwrapper .askwrappertxt {
+  font-size: 28rpx;
+}
+
+.answerwrapper {
+  padding: 15rpx 45rpx 15rpx 30rpx;
+  font-size: 30rpx;
+  background: #f7f7f7;
+}
+.answerwrapper text{
+	font-size: 26rpx;
+}
+
+
+.phone {
+  text-align: center;
+  font-size: 28rpx;
+  color: #22c774;
+  padding: 60rpx;
+}

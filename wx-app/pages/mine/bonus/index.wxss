@@ -1,0 +1,109 @@
+/* pages/bonus/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.header {
+  height: 350rpx;
+  background: #21c775;
+  border: 1rpx solid transparent;
+  position: relative;
+}
+
+.balance {
+  margin-top: 36rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.returns {
+  text-align: center;
+  color: #fff;
+  font-size: 82rpx;
+}
+
+.suspension {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: 9;
+}
+.suspension-in{
+	box-shadow: 0rpx 10rpx 20rpx -10rpx #e9e9e9;
+  display: flex;
+  text-align: center;
+  padding: 0rpx 35rpx;
+	position: relative;
+}
+.Todayearnings {
+  flex: 1;
+  width: 50%;
+	background: #fff;
+	padding: 30rpx 0;
+	border-top-left-radius: 20rpx 20rpx;
+	border-bottom-left-radius: 20rpx 20rpx;
+}
+
+.earnings {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.describetoday {
+  font-size: 24rpx;
+  color: #9ca2a5;
+}
+
+.Historicalearnings {
+  flex: 1;
+  width: 50%;
+	padding: 30rpx 0;
+	background: #fff;
+	border-top-right-radius: 20rpx 20rpx;
+	border-bottom-right-radius: 20rpx 20rpx;
+	
+}
+
+.describeHistory {
+  font-size: 24rpx;
+  color: #9ca2a5;
+}
+
+/*金额操作*/
+
+.isolation {
+  height: 100rpx;
+  background: #f7f7f7;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 35rpx;
+}
+
+.infotype {
+  margin-left: 18rpx;
+  flex: 1;
+  font-size: 32rpx;
+}
+
+.icon-youjiantou {
+  height: 12.5rpx;
+  line-height: 12.5rpx;
+  color: #c9c9c9;
+}

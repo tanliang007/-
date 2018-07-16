@@ -1,0 +1,148 @@
+/* pages/mine/pilepointreturn/returndetails/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.list-item {
+  display: flex;
+  background: #fff;
+  align-items: center;
+  padding: 35rpx;
+}
+
+.list-item .logpic {
+  flex: 0 0 90rpx;
+  height: 130rpx;
+  margin-right: 50rpx;
+}
+
+.list-item .logpic .logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+/* 列表里面的样式  */
+
+.number {
+  display: flex;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  align-items: center;
+  color: #525252;
+}
+
+.area, .date {
+  display: flex;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+.area {
+  margin: 20rpx 0 0 0;
+	color: #525252;
+}
+
+.date {
+  font-size: 26rpx;
+}
+
+.area-tlt {
+  white-space: nowrap;
+  margin-right: 25rpx;
+  color: #515151;
+}
+
+.number-tlt {
+  white-space: nowrap;
+  margin-right: 25rpx;
+  color: #515151;
+}
+
+.money {
+  flex: 1;
+  color: #e97841;
+  font-size: 40rpx;
+}
+
+.money span {
+  font-size: 25rpx;
+  color: #e97841;
+}
+
+.money-fr {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.registeredamount {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  justify-content: space-between;
+  margin-top: 4rpx;
+}
+
+.registeredamount .amount {
+  font-size: 30rpx;
+}
+
+.registeredamount .amount .num {
+  font-size: 30rpx;
+}
+
+.registeredamount .amount .num span {
+  font-size: 25rpx;
+}
+
+.historicalearnings {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  justify-content: space-between;
+  margin-top: 2rpx;
+}
+
+.historicalearnings .earnings {
+  font-size: 30rpx;
+}
+
+.historicalearnings .earnings .num {
+  font-size: 30rpx;
+}
+
+.historicalearnings .earnings .num span {
+  font-size: 25rpx;
+}
+
+.earndetail {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  font-size: 30rpx;
+  margin-bottom: 2rpx;
+  justify-content: space-between;
+  margin-top: 2rpx;
+}
+
+.icon-youjiantou {
+  font-size: 30rpx;
+  color: #d9d9d9;
+}
+
+.rollout {
+  font-size: 30rpx;
+  position: fixed;
+  bottom: 45rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rollouthover {
+  /* bottom: 6rpx; */
+}

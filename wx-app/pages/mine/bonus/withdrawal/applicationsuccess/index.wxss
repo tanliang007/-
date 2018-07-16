@@ -1,0 +1,52 @@
+/* pages/index/rob-pileguide/investpile/robpilesuccess/index.wxss */
+
+.site {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 88rpx auto;
+}
+
+.site image {
+  width: 100%;
+  height: 100%;
+}
+
+.text1 {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  margin: 0 auto;
+  color: #2ec66b;
+  width: 400rpx;
+  display: block;
+  text-align: center;
+}
+
+.text2 {
+  font-size: 30rpx;
+  color: #84daa4;
+  margin-top: 24rpx;
+}
+
+.text3 {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-bottom: 90rpx;
+  color: #1ec678;
+}
+
+.back {
+  width: 300rpx;
+  height: 90rpx;
+  margin: 130rpx auto 0;
+  line-height: 90rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+}
+
+.back-hover {
+  position: relative;
+  top: 6px;
+}

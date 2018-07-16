@@ -1,0 +1,256 @@
+/* pages/sites/index.wxss */
+
+page {
+  background: #f7f7f7;
+  padding-bottom: 130rpx;
+}
+
+.manager-header {
+  text-align: center;
+}
+
+.site {
+  width: 420rpx;
+  height: 210rpx;
+  margin: 88rpx 0;
+}
+
+.text1 {
+  font-size: 26rpx;
+  margin-bottom: 35rpx;
+  color: #3ace57;
+}
+
+.manager {
+  padding: 0 24rpx;
+  margin-top: 20rpx;
+  box-shadow: 0rpx 10rpx 20rpx -10rpx #e9e9e9;
+}
+
+/*离线状态样式*/
+
+.manager-wrapper2 {
+  background-color: #fff;
+  display: flex;
+  /* align-items:center; */
+  padding: 28rpx 0 28rpx 40rpx;
+}
+
+.manager-wrapper2 .logpic {
+  flex: 0 0 93rpx;
+  height: 130rpx;
+}
+
+.manager-wrapper2 .logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper2 .content {
+  flex: 1;
+  margin-left: 44rpx;
+}
+
+.manager-wrapper2 .address {
+  font-size: 32rpx;
+  color: #d8d8d8;
+  line-height: 32rpx;
+}
+
+.difstatus {
+  display: flex;
+}
+
+.manager-wrapper2 .difstatus .specifiaddr {
+  font-size: 25rpx;
+  flex: 1;
+  padding: 10rpx 0;
+  color: #d8d8d8;
+}
+
+.manager-wrapper2 .difstatus .stau {
+  flex: 0 0 200rpx;
+  color: #d8d8d8;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.manager-wrapper2 .difstatus .stauchild {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper2 .difstatus .staucontent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.manager-wrapper2 .time {
+  font-size: 25rpx;
+  color: #d8d8d8;
+}
+
+/* 审核中样式 */
+
+.manager-wrapper0 {
+  background-color: #fff;
+  display: flex;
+  /* align-items:center; */
+  padding: 28rpx 0 28rpx 40rpx;
+}
+
+.manager-wrapper0 .logpic {
+  flex: 0 0 93rpx;
+  height: 130rpx;
+}
+
+.manager-wrapper0 .logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper0 .content {
+  flex: 1;
+  margin-left: 44rpx;
+}
+
+.manager-wrapper0 .address {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 32rpx;
+}
+
+.difstatus {
+  display: flex;
+}
+
+.manager-wrapper0 .difstatus .specifiaddr {
+  font-size: 25rpx;
+  flex: 1;
+  padding: 10rpx 0;
+  color: #8b8b8b;
+}
+
+.manager-wrapper0 .difstatus .stau {
+  flex: 0 0 200rpx;
+  color: #1fc678;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.manager-wrapper0 .difstatus .stauchild {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper0 .difstatus .staucontent {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.manager-wrapper0 .time {
+  font-size: 25rpx;
+  color: #737373;
+}
+
+/*审核通过样式*/
+
+.manager-wrapper1 {
+  background: #fff;
+  display: flex;
+  /* align-items:center; */
+  padding: 28rpx 0 28rpx 40rpx;
+}
+
+.manager-wrapper1 .logpic {
+  flex: 0 0 93rpx;
+  height: 130rpx;
+}
+
+.manager-wrapper1 .logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper1 .content {
+  flex: 1;
+  margin-left: 44rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.manager-wrapper1 .address {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 32rpx;
+}
+
+.difstatus {
+  display: flex;
+}
+
+.manager-wrapper1 .difstatus .specifiaddr {
+  font-size: 25rpx;
+  flex: 1;
+  color: #8b8b8b;
+}
+
+.manager-wrapper1 .difstatus .stau {
+  flex: 0 0 150rpx;
+  color: #1fc678;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.manager-wrapper1 .difstatus .stauchild {
+  width: 100%;
+  height: 100%;
+}
+
+.manager-wrapper1 .difstatus .staucontent {
+  position: absolute;
+  top: 0rpx;
+  right: -10rpx;
+  width: 150rpx;
+  height: 128rpx;
+  background-image: url(' http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/passsite.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.manager-wrapper1 .time {
+  font-size: 25rpx;
+  color: #737373;
+}
+
+.tosite {
+  position: fixed;
+  left: 50%;
+  bottom: 20rpx;
+  transform: translateX(-50%);
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+}
+
+.tosite-hover {
+  position: fixed;
+  left: 50%;
+  bottom: 25rpx;
+  transform: translateX(-50%);
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+}

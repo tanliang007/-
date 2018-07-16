@@ -1,0 +1,155 @@
+/* pages/index/rob-pileguide/investpile/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+  height: 100%;
+}
+
+.minpic, .pluspic {
+  width: 32rpx;
+  border: 10px solid transparent;
+  height: 32rpx;
+}
+
+.minpic image, .pluspic image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.bigbgc {
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+
+.robpilepic {
+  width: 430rpx;
+  height: 220rpx;
+  display: block;
+  margin: 0rpx auto 40rpx;
+}
+
+.serial {
+  display: flex;
+  padding: 0 40rpx;
+  margin-bottom: 30rpx;
+  /* align-items: center; */
+  font-size: 30rpx;
+}
+
+.serial .serialtlt, .area .areatlt {
+  white-space: nowrap;
+  margin-right: 20rpx;
+  color: #515151;
+}
+
+.area {
+  display: flex;
+  padding: 0 40rpx;
+  /* align-items: center; */
+  font-size: 30rpx;
+}
+
+/* 加减号样式 */
+
+.shopcar {
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.shopcar-price {
+  color: #e97841;
+  font-size: 45rpx;
+}
+
+.shopcar-price .unit {
+  font-size: 32rpx;
+  margin-right: 3rpx;
+}
+
+.minandplus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nums {
+  font-size: 35rpx;
+  line-height: 30rpx;
+}
+
+.surplus {
+  margin-top: 30rpx;
+  padding: 0 40rpx;
+  font-size: 26rpx;
+  color: #909090;
+}
+
+/* 条款样式 */
+
+.clause {
+  display: flex;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.clause image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.clausetxt {
+  color: #343434;
+  font-size: 28rpx;
+  margin-left: 12rpx;
+}
+
+.clausetxt .quotes {
+  color: #1fc687;
+}
+
+/* 确认按钮样式  */
+
+.surebtn {
+  color: #fff;
+  width: 350rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 80rpx;
+  font-size: 36rpx;
+  background: linear-gradient(to right, #3ace57, #1ec678);
+}
+
+.surebtnhover {
+  position: relative;
+  top: 6rpx;
+}
+
+/* 抢庄份数的盒子 */
+
+.progress {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+
+.progresspart {
+  background-color: #e9e9e9;
+  height: 24rpx;
+  width: 12rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.nonepart {
+  height: 24rpx;
+  width: 12rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  background: #32c960;
+}

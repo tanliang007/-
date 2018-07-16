@@ -1,0 +1,144 @@
+page {
+  background: #f7f7f7;
+}
+
+.keyphone {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.keyphone label {
+  flex: 0 0 170rpx;
+  font-size: 35rpx;
+}
+
+.keyphone .contact-input {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+/*验证码样式  */
+
+.code {
+  display: flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.code  label {
+  flex: 0 0 170rpx;
+  font-size: 35rpx;
+}
+
+.codechild {
+  flex: 1;
+}
+
+.code-input {
+  height: 35rpx;
+  font-size: 30rpx;
+  line-height: 35rpx;
+}
+
+.input-placeholder {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #bababa;
+}
+
+.keyphone span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -10rpx;
+  width: 1rpx;
+  height: 70rpx;
+  background: #f4f4f4;
+}
+
+.contactgetcode {
+  display: inline-block;
+  vertical-align: middle;
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #24c771;
+  text-align: center;
+  position: relative;
+  padding: 0 30rpx;
+}
+
+.countdownnow {
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #c9c9c9;
+  padding: 0 30rpx;
+  position: relative;
+  text-align: center;
+}
+
+/* 输入电卡的样式 */
+
+.sitename {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.sitename-label {
+  flex: 0 0 170rpx;
+  font-size: 35rpx;
+}
+
+.sitename-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+}
+
+/*添加电卡按钮样式*/
+
+.mysubmit {
+  margin-top: 100rpx;
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+}
+
+.mysubmitdown-hover {
+  margin-top: 100rpx;
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+}
+
+/* 扫码充电样式 */
+
+.saocard {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 40rpx;
+}
+
+.saocard image {
+  width: 100%;
+  height: 100%;
+}

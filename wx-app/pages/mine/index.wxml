@@ -1,0 +1,111 @@
+<!--pages/mine/index.wxml-->
+<view class='recharge'>
+  <view class='recharge-wrapper'>
+    <view style='margin: 30rpx auto 20rpx auto;height:140rpx;width:140rpx;display: flex;align-items: center; justify-content: center; '>
+      <image src='{{avatarUrl}}' class='lightning' bindtap='controlChangeUserModal'></image>
+    </view>
+    <view class='user'>{{phone}}</view>
+    <view class='hasrz'>
+    </view>
+  </view>
+  <view class='suspension'>
+    <view class='balance'>钱包余额
+      <view class='balancepr'>{{walletAmount/100}}</view>
+    </view>
+    <view class='topup' bindtap='navtoTopup'>充值</view>
+  </view>
+</view>
+<view class='isolation'></view>
+<view class='personcenterlist'>
+  <view class='item' bindtap='jumpToRecords'>
+    <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/pyrecords.png'></image>
+    <view class='infotype'>充电记录</view>
+    <view class="iconfont icon-youjiantou "></view>
+  </view>
+
+  <block wx:if="{{noAgent}}">
+    <view class='item' bindtap="jumpToapplymaster">
+      <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/%E7%94%B3%E8%AF%B7%E6%A1%A9%E4%B8%BB@3x.png'></image>
+      <view class='infotype'>我要合作</view>
+      <view class="iconfont icon-youjiantou "></view>
+    </view>
+  </block>
+
+  <view class='item' bindtap='jumpToIncome' wx:if="{{bonus}}">
+    <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/me-earnings@3x.png'></image>
+    <view class='infotype'>我的收益</view>
+    <view class="iconfont icon-youjiantou "></view>
+  </view>
+
+  <block wx:if="{{isAgent}}">
+    <view class='item' bindtap='jumpTositemanagement'>
+      <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/management@3x.png'></image>
+      <view class='infotype'>站点管理</view>
+      <view class="iconfont icon-youjiantou "></view>
+    </view>
+  </block>
+
+  <view class='item' bindtap="jumptoCardManagement">
+    <image class='icon' style="width: 28rpx;height:23rpx;" src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/%E5%85%85%E7%94%B5%E5%8D%A1@3x.png'></image>
+    <view class='infotype'>电卡管理</view>
+    <view class="iconfont icon-youjiantou"></view>
+  </view>
+
+  <!-- 动态切换桩点   sponsor-->
+  <view class='item' bindtap='jumpToPilePointReturn' wx:if="{{sponsor}}">
+    <image class='icon' style="width: 30rpx;height: 30rpx;" src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/Incomepilepointicon.png'></image>
+    <view class='infotype'>收益桩点</view>
+    <view class="iconfont icon-youjiantou"></view>
+  </view>
+</view>
+
+<view class='changewrapper' wx:if="{{changeUsermodal}}">
+  <view class='changewrapper-child'>
+    <view class='changewrapper-in'>
+      <view bindtap='changeoPerate' data-type="x" class='x'>更换手机号</view>
+      <view bindtap='changeoPerate' data-type="y" class='y'>切换账号</view>
+      <view style='border:none;' bindtap='hideControlChangeUserModal'>取消</view>
+    </view>
+  </view>
+</view>
+<view class='shadow' wx:if="{{changeUsermodal}}" bindtap='hidechangeUsermodal'>
+
+</view>
+
+<!-- 切换手机号和账号的模态框  -->
+<view class="wxapp-modal" wx:if="{{changeUserOrPhone}}">
+  <view class="content">
+
+    <view class='the-title'>
+      <view class='close' bindtap='closeDialog'>
+        <image src='../../icons/close.png'></image>
+      </view>
+      <text>{{titleText}}</text>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+
+      <view class='keyphone'>
+        <input class="contact-input" name="phone" placeholder="请输入手机号码" type="number" cursor-spacing='20' maxlength="11" placeholder-class="input-placeholder" bindinput="mobileInputEvent" />
+      </view>
+
+      <view class='code'>
+        <view class='codechild'>
+          <input class="code-input" name="captcha" placeholder="请输入验证码" type="number" cursor-spacing='20' placeholder-class="input-placeholder" />
+        </view>
+        <span bindtap="getVerificationCode" id="{{VerificationCode?'contactgetcode':'countdownnow'}}" class="{{VerificationCode?'contactgetcode':'countdownnow'}}">{{time}}
+        </span>
+      </view>
+
+      <view class='covermysubmit'>
+        <button hover-class='mysubmitdown' class="mysubmit" formType="submit"> {{bindtext}}
+        </button>
+      </view>
+    </form>
+  </view>
+  <view class="mask"></view>
+</view>
+
+
+
+<!-- <navigator style="position:absolute;bottom:0;left:0;font-size:30rpx;height:80rpx;width:200rpx;background:#f7f7f7;text-align:center;" url="../logs/index">
+</navigator> -->

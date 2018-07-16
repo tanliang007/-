@@ -1,0 +1,66 @@
+/* pages/mine/pilepointreturn/detailslist/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.log-pic {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.earnwrapper {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  padding: 35rpx;
+  align-items: center;
+  margin-bottom: 2rpx;
+}
+
+.log-pic {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.log-pic image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.logo .name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 35rpx;
+}
+
+.content .deductions {
+  color: #e97841;
+  font-size: 34rpx;
+  text-align: right;
+}
+
+.content .creatdedtime {
+  color: #bebebe;
+  font-size: 28rpx;
+  text-align: right;
+}
+
+/* loading样式 */
+
+.tips1{
+	padding:30rpx;
+}
+
+.loadpng {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.nocontent {
+  text-align: center;
+}

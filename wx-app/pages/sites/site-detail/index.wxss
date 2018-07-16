@@ -1,0 +1,235 @@
+page {
+    background: #f7f7f7;
+    padding-bottom: 130rpx;
+}
+
+.manager {
+    background-color: #fff;
+    padding: 24rpx 0 0 20rpx;
+    box-shadow: 0rpx 10rpx 20rpx -10rpx #e9e9e9;
+    margin-bottom: 15rpx;
+}
+
+.manager-wrapper {
+    background-color: #fff;
+    display: flex;
+    padding: 28rpx 0 28rpx 40rpx;
+}
+
+.logpic {
+    flex: 0 0 90rpx;
+    height: 130rpx;
+}
+
+.logpic-log {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    margin-left: 44rpx;
+}
+
+.address {
+    font-size: 32rpx;
+    color: #333;
+    margin-top: -5rpx;
+}
+
+.specifiaddr {
+    font-size: 25rpx;
+    margin: 8rpx 0 12rpx 0;
+    color: #8b8b8b;
+}
+
+.time {
+    font-size: 25rpx;
+    color: #737373;
+}
+
+.pilelist {
+    margin-bottom: 20rpx;
+    position: relative;
+    padding: 0rpx 20rpx 0 20rpx;
+}
+
+.serialnum {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 20rpx 0;
+}
+
+.serialnum-txt {
+    flex: 0 0 134rpx;
+    color: #8b8b8b;
+    font-size: 28rpx;
+}
+
+.serialnum-txt2 {
+    flex: 1;
+    font-size: 30rpx;
+}
+
+.addr {
+    margin-bottom: 2rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.addr-txt {
+    flex: 0 0 134rpx;
+    vertical-align: top;
+    font-size: 30rpx;
+}
+
+.addr-txt2 {
+    flex: 1;
+    font-size: 28rpx;
+    color: #8b8b8b;
+}
+
+
+/*没有桩点时的css*/
+
+.jiancontainer {
+    margin-top: 100rpx;
+}
+
+.jianshepic {
+    width: 245rpx;
+    height: 300rpx;
+    margin: 100rpx auto 70rpx auto;
+    display: block;
+}
+
+.jianshe {
+    text-align: center;
+    color: #3dca75;
+    font-size: 26rpx;
+    margin-top: 40rpx;
+}
+
+.tosite {
+    position: fixed;
+    left: 50%;
+    bottom: 20rpx;
+    transform: translateX(-50%);
+    width: 300rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: linear-gradient(to right, #1ec678, #3ace57);
+    font-size: 36rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    color: #fff;
+}
+
+.tosite-hover {
+    position: fixed;
+    left: 50%;
+    bottom: 25rpx;
+    transform: translateX(-50%);
+    width: 300rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: linear-gradient(to right, #1ec678, #3ace57);
+    font-size: 36rpx;
+    text-align: center;
+    border-radius: 50rpx;
+    color: #fff;
+}
+
+
+/*空闲充电桩 总共样式 */
+
+.kongxian {
+    color: #2bc66e;
+    font-size: 30rpx;
+    margin-right: 30rpx;
+}
+
+.zaichong {
+    color: #ffaf32;
+    font-size: 30rpx;
+}
+
+.kongxian span {
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    margin-bottom: 5rpx;
+    border-radius: 50%;
+    background-color: #24c771;
+}
+
+.zaichong span {
+    display: inline-block;
+    width: 15rpx;
+    height: 15rpx;
+    border-radius: 50%;
+    margin-bottom: 5rpx;
+    background-color: #ffb94b;
+}
+
+.signalbgc0 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_0.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}
+
+.signalbgc1 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_1.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}
+
+.signalbgc2 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_2.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}
+
+.signalbgc3 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_3.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}
+
+.signalbgc4 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_4.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}
+
+.signalbgc5 {
+    display: inline-block;
+    width: 31rpx;
+    height: 26rpx;
+    background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_5.png');
+    background-repeat: none;
+    background-size: 100% 100%;
+    margin-left: 30rpx;
+}

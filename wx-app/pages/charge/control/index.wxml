@@ -1,0 +1,95 @@
+<!--pages/charging-controls/index.wxml-->
+<view class="{{charging ? 'bg-top' : 'redbg-top'}}">
+  <view class='outer'>
+    <view class="{{charging ? 'content' : 'redcontent'}}">
+      <view class='content-Wrapper'>
+        <!-- 未接负载结构  -->
+        <block wx:if="{{suspendstyle}}">			
+					<view class='countdown'>
+						 <view style='font-size:30rpx;line-height:50rpx;'>{{power}}w</view> 
+						{{countdown}}
+					</view>
+          <view class="{{ charging ?'': txtColor }} 'countDesc'">{{charging?'正在充电' : '请接上电缆'}}</view>
+        </block>
+        <!--  断电结构 -->
+        <block wx:else>
+          <view class='suspendimg'>
+            <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/trianglewarning@3x.png'></image>
+          </view>
+          <view class='suspendtext'>已断电!!!</view>
+        </block>
+      </view>
+    </view>
+    <view class="{{charging ? 'box' : 'boxNoAnimation'}}">
+      <!-- <view class="box1"></view>
+      <view class="box2"></view> -->
+    </view>
+    <view class='line' class="{{charging ? 'line' : 'lineNoAnimation'}}"></view>
+    <view>
+    </view>
+  </view>
+
+  <view class='chargearea'>
+    <text class='areaDtl'>{{siteName}}</text>
+		<view class='portlocation' wx:if="{{controlCharginginfo}}">{{siteAddress}}{{pileAddress}}{{pileNo}}号桩{{portNum}}路端口</view>
+		<view bindtap='controlShowCharginginfo' class='iconfont {{ controlCharginginfo ? "icon-up": "icon-down"}} changeicon' ></view>
+  </view>
+</view>
+
+<view class="{{charging ? 'bg-cloud' : 'bg-redcloud '}}">
+</view>
+
+<view class='shuntiming clearfloat'>
+  <view class='starttiming'>
+    <view class='starttxt'>开始时长</view>
+    <view class='starttime'>{{Isthetiming}}</view>
+  </view>
+  <view class='monetary'>
+    <view class='monetarytxt'>消费金额</view>
+    <view class='monetarynum'>{{realConsumption}}</view>
+  </view>
+</view>
+
+<button wx:if="{{charging!=null && suspendstyle }}" class="{{charging ? 'greenbutton' : 'redbutton'}}" bindtap='onButtonClick' hover-class="{{charging ? 'greenbutton-hover' : 'redbutton-hover'}}  ">{{charging ? '结束充电' : '电缆已接好'}}</button>
+
+<button class='backindexbtn' wx:if="{{ charging!=null&&!charging && suspendstyle }}" bindtap='onBackorStopClick'>{{ '结束充电'}}</button>
+
+<button class='backindexbtn' wx:if="{{charging && pageDeep == 1 && suspendstyle}}" bindtap='chargeingbackbtn'>{{ '返回首页'}}</button>
+
+<!-- <navigator   style='margin:20rpx auto;box-sizing:border-box;border:1rpx solid #C9C9C9;width: 300rpx;height: 90rpx;line-height: 90rpx;background: #fff;font-size: 36rpx;text-align: center;border-radius: 50rpx;color:#767676;' url='/pages/index/index' open-type='redirect'> 返回首页 </navigator> -->
+
+<view wx:if="{{!suspendstyle}}" class='warningtip'>
+  <view class='warningtipimg'>
+    <view style='display:inline-block;vertical-align:middle;'>
+      <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/trianglewarning@3x.png'></image>
+    </view>
+    <view class='warningtiptxt'>目前充电桩临时断电，此期间不计任何费用，电力恢复时将继续充电，请耐心等待!</view>
+  </view>
+
+  <button class='powerToStop' bindtap='onpowerToStop'>{{ '结束充电'}}</button>
+</view>
+
+<view class="drawer_screen" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+
+<!--  -->
+<!--自定义模态框结构-->
+<view class="searchcable" wx:if="{{showModalStatus}}">
+  <view class="searchcable-k">
+    <view class="searchcable-b">
+      <view class="searchcable-m">{{context}}</view>
+    </view>
+  </view>
+  <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+</view>
+
+<!--自动完成模态框防止蒙曾的问题-->
+<view class="drawer_screen" wx:if="{{showFinshDialogue}}"></view>
+<view class="drawer_box" wx:if="{{showFinshDialogue}}">
+  <view class="drawer_content">
+    <view class="top grid">
+      <view class="title  zidongfinish">{{finshtext}}</view>
+    </view>
+  </view>
+  <view class="btn_ok" bindtap="chargeFinshConfirm">确定</view>
+</view>

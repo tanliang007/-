@@ -1,0 +1,276 @@
+/* pages/mine/index.wxss */
+
+page {
+  background: #f7f7f7;
+  padding-bottom: 30rpx;
+}
+
+.recharge {
+  position: relative;
+}
+
+.recharge-wrapper {
+  padding-bottom: 110rpx;
+  background: #24c771;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lightning {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.user {
+  display: block;
+  color: #fff;
+}
+
+.hasrz {
+  position: absolute;
+  right: -40rpx;
+  top: 70rpx;
+}
+
+.suspension {
+  width: 80%;
+  height: 150rpx;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  background: #fff;
+  z-index: 4;
+  box-shadow: 0rpx 10rpx 20rpx -10rpx #e9e9e9;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.balance {
+  flex: 1;
+  font-size: 28rpx;
+  padding-left: 40rpx;
+  font-weight: bold;
+}
+
+.balancepr {
+  font-size: 42rpx;
+  color: #e97841;
+  font-weight: bold;
+}
+
+.topup {
+  flex: 0 0 120rpx;
+  text-align: center;
+  padding: 15rpx;
+  font-size: 30rpx;
+  margin-right: 40rpx;
+  background: linear-gradient(to right, #1ec678, #3ace57);
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.isolation {
+  height: 100rpx;
+  background: #f7f7f7;
+  position: relative;
+}
+
+/* 列表样式 */
+
+.personcenterlist {
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.icon-kefu {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.infotype {
+  margin-left: 18rpx;
+  flex: 1;
+  line-height: 30rpx;
+  font-size: 30rpx;
+}
+
+.icon-youjiantou {
+  height: 12.5rpx;
+  line-height: 12.5rpx;
+  color: #c9c9c9;
+}
+
+/* 客服按钮的样式  */
+
+.itemkefu {
+}
+
+.button {
+  flex: 1;
+  color: #333;
+  font-size: 30rpx;
+  padding: 0;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 0;
+  background: #fff;
+  text-align: left;
+  margin-left: 18rpx;
+}
+
+.button::after {
+  border: none;
+  border-radius: 0;
+}
+
+/* 切换手机号样式 */
+
+.content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 600rpx;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 88;
+  background: rgba(1, 1, 1, 0.6);
+}
+
+.the-title {
+  padding: 65rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 25rpx;
+  right: 25rpx;
+  width: 32rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 50rpx;
+  /* background-color: red; */
+}
+
+.close image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.keyphone {
+  padding: 0 65rpx;
+}
+
+.code {
+  padding: 60rpx 65rpx 90rpx 65rpx;
+  display: flex;
+}
+
+.codechild {
+}
+
+.code-input {
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.input-placeholder {
+  font-size: 35rpx;
+  line-height: 35rpx;
+}
+
+.contactgetcode {
+  display: inline-block;
+  vertical-align: middle;
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #24c771;
+  text-align: center;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+}
+
+.countdownnow {
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #c9c9c9;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+  text-align: center;
+}
+
+.mysubmit {
+  background-color: #24c771;
+  color: #fff;
+}
+
+.covermysubmit {
+  background-color: #24c771;
+  margin-bottom: -10rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+/* 切换手机号弹窗的样式 */
+
+.changewrapper {
+  position: fixed;
+  bottom: 50rpx;
+  left: 0;
+  width: 100%;
+  height: 360rpx;
+	z-index: 10;
+}
+
+.changewrapper-child {
+	padding: 0 40rpx;
+}
+.changewrapper-in{
+	border-radius: 35rpx;
+	background: #fff;
+}
+.changewrapper-in view{
+	height: 120rpx;
+	line-height: 120rpx;
+	text-align: center;
+	box-sizing: border-box;
+	border-bottom:1rpx solid #f1f1f1;
+}
+.shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+}

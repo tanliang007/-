@@ -1,0 +1,41 @@
+<!--pages/logs/index.wxml-->
+<view style='position:fixed;top:0;left:0;right:0;height:60rpx;background:#fff;'>
+	<view style='display:flex;text-align:center;'>
+		<view style='flex:1;' bindtap='dubug'>DEBUG</view>
+		<view style='flex:1;' bindtap='info'>INFO</view>
+		<view style='flex:1;' bindtap='error'>ERROR</view>
+	</view>
+</view>
+
+<view wx:if="{{showdebugLogs}}" style='padding:0 10rpx;margin-top:70rpx;'>
+  <view wx:for='{{debugLogs}}' style='margin-bottom:30rpx;font-size:30rpx;color:{{item.level == "debug" ? "gray" : (item.level == "info" ? "green" : "red" ) }};'>
+    <div>
+      {{ item.time }}
+    </div>
+    <div>
+      {{ item.text }}
+    </div>
+  </view>
+</view>
+
+<view wx:if="{{showinfoLogs}}" style='padding:0 10rpx;margin-top:70rpx;'>
+  <view wx:for='{{infoLogs}}' style='margin-bottom:30rpx;font-size:30rpx;color:{{item.level == "info" ? "green" : "red"}};'>
+   <div>
+      {{ item.time }}
+    </div>
+    <div>
+      {{ item.text }}
+    </div>
+  </view>
+</view>
+
+<view wx:if="{{showerrorLogs}}" style='padding:0 10rpx;margin-top:70rpx;'>
+  <view wx:for='{{errorLogs}}' style='color:red;margin-bottom:30rpx;font-size:30rpx;'>
+    <div>
+      {{ item.time }}
+    </div>
+    <div>
+      {{ item.text }}
+    </div>
+  </view>
+</view>

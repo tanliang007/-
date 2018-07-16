@@ -1,0 +1,120 @@
+/* pages/mine/pilepointreturn/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.header {
+  height: 240rpx;
+  background: #21c775;
+  border: 1rpx solid transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalreturn {
+  line-height: 32rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.tips {
+  padding: 25rpx 35rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+}
+
+.earnings {
+  color: #fff;
+  font-size: 82rpx;
+  line-height: 82rpx;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.wrapper {
+}
+
+.list-item {
+  display: flex;
+  background: #fff;
+  padding: 35rpx;
+	margin-top: 2rpx;
+}
+
+.list-item .logpic {
+  flex: 0 0 90rpx;
+  height: 130rpx;
+  margin-right: 50rpx;
+}
+
+.list-item .logpic .logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+/* 列表里面的样式  */
+
+.number, .area, .date {
+  display: flex;
+  /* align-items: center; */
+  font-size: 28rpx;
+}
+
+.area {
+  margin: 20rpx 0;
+}
+
+.date {
+  font-size: 26rpx;
+}
+
+.area-tlt {
+  white-space: nowrap;
+  margin-right: 25rpx;
+}
+
+.number-tlt {
+  white-space: nowrap;
+  margin-right: 25rpx;
+}
+
+.money {
+  flex: 1;
+  color: #e97841;
+  font-size: 40rpx;
+}
+
+.money span {
+  font-size: 25rpx;
+  color: #e97841;
+}
+
+.money-fr {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* 抢注桩点按钮  */
+
+.robpileearingbtn {
+  color: #fff;
+  width: 350rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 80rpx;
+  font-size: 40rpx;
+	margin: 30rpx auto;
+	text-align: center;
+  background: linear-gradient(to right, #3ace57, #1ec678);
+}
+
+.robpileearingbtnhover {
+  position: relative;
+  top: 6rpx;
+}

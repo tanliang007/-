@@ -1,0 +1,52 @@
+<view class="page {{showscreening? 'overflow':''}}">
+  <!--pages/records/index.wxml-->
+  <view class='screeningheader' bindtap='popupScreening'>
+    <view class='screeningheader-text'>分润筛选</view>
+    <view class='screeningheader-img'>
+      <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/fenRunScreening@3x.png'></image>
+    </view>
+  </view>
+
+  <view wx:if="{{isnull}}">
+    <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/noneFenRun.png' style='width:467rpx;height:346rpx;margin: 240rpx auto 70rpx auto;display:block; '></image>
+    <view style='text-align:center;color:#3dca76;'>暂时没有相关记录</view>
+  </view>
+
+  <view class='bonusWrapper' wx:for="{{bonusDetList}}" wx:key="{{item.time}}" wx:if="{{!isnull}}">
+    <view class='bonus-left'>
+      <view style='display: flex;align-items:center;height:100%;'>
+        <image src='{{item.img}}'></image>
+        <view class='bonusType'>
+          {{item.type == 8 ? ( item.amount < 0 ?  item.txt : item.txt + '失败' ): item.txt }}
+        </view>
+      </view>
+    </view>
+    <view class='bonus-right'>
+      <view class='bonusmoney'> {{ item.amount >= 0 ? '+'+(item.amount/100):item.amount/100}}</view>
+      <view class='bonusTime'>{{item.time}}</view>
+    </view>
+  </view>
+
+  <view class="tips1">
+    <view class="refresh-block" wx:if="{{loading}}">
+      <image class='loadpng' animation="{{refreshAnimation}}" src="http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/loader.png"></image>
+    </view>
+    <view wx:if="{{hasMore}}" class='nocontent'>
+      <text>没有更多内容了</text>
+    </view>
+  </view>
+
+  <!-- 底部晒选弹框 -->
+  <view class='bottomscreening ' wx:if="{{showscreening}}">
+    <!-- screeningType -->
+    <view class='Screeningcontainer clearfloat' >
+      <view bindtap='chooseScreeningType' wx:for="{{screeningType}}" wx:key="{{item.typeid}}" data-typeid="{{item.typeid}}" data-istap="{{item.istap}}" class='{{item.istap? "istap":"notap"}}      {{  (index+1)%3==0 ?"thethird":""}}'>
+        {{item.typename}}
+      </view>
+    </view>
+    <view bindtap='sureScreeningType' class='suretype'>确定</view>
+  </view>
+  <view class='mask' wx:if="{{showscreening}}" bindtap='packupScreening'>
+
+  </view>
+</view>

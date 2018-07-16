@@ -1,0 +1,74 @@
+<!--pages/charge-details/index.wxml-->
+<form report-submit="true" bindsubmit="startCharge">
+
+  <view class='equipmentnumber'>
+    <view class='equipmentone'>
+      <view>设备编号</view>
+      <view class='num'>{{pileNo}}</view>
+    </view>
+  </view>
+  <view class='chargetitle'>
+    <view style='margin:0 1%;font-size:30rpx;'>充电端口</view>
+  </view>
+  <view class='chargingbase  {{chargingWrapper}}'>
+    <view class="port {{item.status==='1'?'free':'b'}}" data-status="{{item.status}}" data-port="{{item.port}}" data-chargingindex="{{index+1}}" style="background:{{curindex === item.port?'#37cc5c':''}};color:{{curindex === item.port?'#fff':''}};" wx:for="{{Chargingpile}}"
+      wx:key="{{item.id}}" bindtap='ontapPort'>
+      {{item.port}}{{status[item.status - 1]}}
+    </view>
+  </view>
+
+  <!-- <view class='timetitle'>充电时长</view>
+  <view class='chargingtime {{chargingTimeWrapper}}'>
+    <view class="timelength" data-timeindex="{{index}}" data-price="{{item.price}}" data-hour="{{item.hour}}" style="background-color:{{curtimeindex===index?'#37cc5c':''}};color:{{curtimeindex === index?'#fff':'#333333'}};" wx:for="{{timelength}}" bindtap='ontapTime'
+      wx:key="{{item.hour}}">
+      {{item.hour}}小时
+    </view>
+  </view> -->
+
+  <!-- 时长新的 -->
+  <view class='timepicker'>
+    <label class='timepickertlt'>充电时间</label>
+    <picker range="{{timelength}}" range-key="{{'hour'}}" mode="selector" bindchange="bindtimeChange" value="{{timeAndPriceIndex}}">
+      <view class='pker'>
+        <!-- <input disabled="true" placeholder="请选择充电时长" placeholder-class="timepicker-placeholder"  value='{{showTimelength}}' /> -->
+        <view class='{{isTapTime ? "confirmcolor" : "defaultcolor"}}'>{{format(timelength[timeAndPriceIndex].hour)? format(timelength[timeAndPriceIndex].hour) : 0  }}<span class="hb" >小时</span></view>
+        <label class='iconfont icon-youjiantou'></label>
+      </view>
+    </picker>
+  </view>
+     
+  <view class='showpaymoney'>
+    <span style="font-size:30rpx;">
+      充电金额
+    </span>
+    <span class='Minus'>
+      <span>{{timePrice}}</span>
+      <span class='yuan'>元</span>
+      <span class='iconfont icon-youjiantou shoicon'></span>
+    </span>
+  </view>
+
+  <view class='showpaymoney' bindtap='navtobalance' >
+    <span style="font-size:30rpx;">
+      余额抵扣
+    </span>
+    <span class='Minus' style='color:#F5834C;'>
+      <span>-{{minusWallet}}</span>
+      <span class='yuan'>元</span>
+      <span class='iconfont icon-youjiantou'></span>
+    </span>
+  </view>
+
+  <button hover-class='payPointDown' class="payPoint" formType="submit">立即充电</button>
+</form>
+
+<navigator wx-if='{{pageDeep == 1}}' url='/pages/index/index' style='margin:30rpx auto ;box-sizing:border-box;border:1rpx solid #C9C9C9; width: 350rpx;height: 90rpx;line-height: 90rpx;background: #f7f7f7;font-size: 40rpx;text-align: center;border-radius: 80rpx;color:#767676;'
+  open-type='redirect'> 返回首页 </navigator>
+
+<wxs module="format">
+  module.exports = function(ab) {
+	  var num = 0;
+		num= parseInt(ab)
+		return num
+  }
+</wxs>

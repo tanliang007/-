@@ -1,0 +1,37 @@
+<!--pages/master-apply/index.wxml-->
+<view class="master-apply">
+
+  <view class="nav bc-white">
+    <view class="{{selected?'green':'default'}}" bindtap="personal">个人</view>
+    <view class="{{selected1?'green':'default'}}" bindtap="Corp">企业</view>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+
+    <view class='name' style='margin-top:10rpx;'>
+      <label class='name-label'>姓名</label>
+      <input class="name-input"   name="realName"  maxlength='10' placeholder="请输入用户名" type="text" placeholder-class="input-placeholder" />
+    </view>
+		
+    <view class='home'>
+      <label class='home-label'>所在地</label>
+      <picker id='region' mode="region" bindchange="bindRegionChange">
+        <view class='homeWrapper'>
+          <input name="address" disabled="true" value='{{area}}' class="home-input" placeholder="选择省/市/区" placeholder-class="input-placeholder" />
+          <label class='iconfont icon-youjiantou'></label>
+        </view>
+      </picker>
+    </view>
+
+    <!-- <view class='detailaddress'>
+      <label class='detailaddress-label'>详细地址</label>
+      <textarea  class="detailaddress-input"  auto-height  name="addressDetail" placeholder="填写街道/门牌号" placeholder-class="input-placeholder" />
+    </view> -->
+
+    <!--切换组织机构代码  -->
+    <view class='organization' wx:if="{{condition}}">
+      <label class='organization-label'>组织机构代码</label>
+      <input class="organization-input" name="orgCode" placeholder="请输入组织机构代码" type="text" placeholder-class="input-placeholder" />
+    </view>
+    <button hover-class='mysubmitdown' class="mysubmit" formType="submit">提交</button>
+  </form>
+</view>

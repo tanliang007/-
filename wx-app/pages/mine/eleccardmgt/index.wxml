@@ -1,0 +1,106 @@
+<!--pages/mine/eleccardmgt/index.wxml-->
+<view class='cardsimple'>
+  <view class='cardtotal'>
+    卡({{cardList.length}}张)
+  </view>
+  <view class='newcard' bindtap='navtoAddElecard'>添加</view>
+</view>
+
+<view class='manager-content'>
+  <view class='manager' wx:for="{{cardList}}" wx:key="{{item.id}}">
+    <view bindtap="changeName" data-index="{{index}}" class=" {{index+1 == selectedList[index]?'carditem':'carditemblock'}}" style='background-color:{{item.status == 2? "#78ddae":"#1ec678"}};'>
+      <view class='top'>
+        <view class='lf'>
+          <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/lightning.png'></image>充电卡 </view>
+        <view class='rg'>
+          <span>{{item.amount/100}} <span style="font-size:24rpx;">元</span></span>
+        </view>
+      </view>
+
+      <view class='bot'>
+        <view class='lf'>{{format(item.cardNo)}}</view>
+        <view class="iconfont {{ index+1 == selectedList[index]? 'icon-up':'icon-down'}}"></view>
+      </view>
+
+    </view>
+
+    <view style="display:{{index+1 == selectedList[index]?'block':'none'}};">
+      <view class='cardfunction'>
+        <navigator class='defaultcardTop' url='./defaultcardtopup/index?cardNo={{item.cardNo}}'>充值</navigator>
+				<!-- 转到余额 -->
+        <view class='rollout' bindtap='rollOut' data-Id="{{item.id}}" data-availablebalance="{{item.amount}}" data-cardnum="{{format(item.cardNo)}}">
+          转出
+        </view>
+        <view class='more' bindtap='controlmoresuspension' data-moreShowStau="{{item.moreShowStau}}" data-i="{{index}}">
+          更多
+        </view>
+
+        <view class='moresuspension' wx:if="{{item.moreShowStau}}">
+          <view class='in'>
+						<!-- 转到电卡  -->
+            <view class='shiftto' bindtap='rollIn' data-Id="{{item.id}}" data-cardnum="{{format(item.cardNo)}}">转入</view>
+            <view class='loss' bindtap='backto' data-cardNo="{{item.cardNo}}" wx:if="{{item.status==2}}" data-Id="{{item.id}}">找回</view>
+            <view class='loss' bindtap='loss' data-cardNo="{{item.cardNo}}" data-Id="{{item.id}}" wx:else>挂失</view>
+            <view class='delete' bindtap='Delete' data-delId="{{item.id}}" data-cardNo="{{item.cardNo}}">解绑
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<view class='item1' bindtap='navtoActivationCard'>
+  <view class='infotype'>新卡激活</view>
+  <view class="iconfont icon-youjiantou"></view>
+</view>
+<view class='item' bindtap='navtoSubStitute'>
+  <view class='infotype'>代充值</view>
+  <view class="iconfont icon-youjiantou"></view>
+</view>
+<!-- 当前页面注册的弹框  -->
+<block wx:if="{{showcardmodal}}">
+  <view class="content">
+    <view class='the-title'>
+      <view class='close' bindtap='maskhide'>
+        <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/close.png'></image>
+      </view>
+      <view class='tlt'>{{judge == 0? "电卡挂失":"电卡找回"}}</view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='keyphone'>
+        <input class="contact-input" name="phone" value='{{phone}}' placeholder="请输入手机号码" type="number" cursor-spacing='20' maxlength="11" placeholder-class="input-placeholder" bindinput="mobileInputEvent" />
+      </view>
+      <view class='code'>
+        <view class='codechild'>
+          <input class="code-input" value='{{captcha}}' name="captcha" placeholder="请输入验证码" type="number" cursor-spacing='20' placeholder-class="input-placeholder" />
+        </view>
+        <span bindtap="getVerificationCode" id="{{VerificationCode?'contactgetcode':'countdownnow'}}" class="{{VerificationCode?'contactgetcode':'countdownnow'}}">{{time}}
+        </span>
+      </view>
+
+      <view class='covermysubmit'>
+        <button hover-class='mysubmitdown' class="mysubmit" formType="submit">确定</button>
+      </view>
+    </form>
+  </view>
+  <view class="mask"></view>
+</block>
+<!-- 处理银行卡格式化  -->
+<wxs module="format">
+  module.exports = function(cardNo) {
+    cardNo = cardNo.toString()
+    var arr = []
+    for (var i = 0; i < cardNo.length; i++) {
+      arr.push(cardNo[i])
+      if (i > 0 && (i + 1) % 4 == 0) {
+        arr.push('\t')
+      }
+
+    }
+    return arr.join('');
+  }
+</wxs>

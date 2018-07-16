@@ -1,0 +1,351 @@
+/* pages/mine/eleccardmgt/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+/* 头部无卡绑定样式 */
+
+.bindcard-header {
+  text-align: center;
+}
+
+.unbindcard {
+  width: 420rpx;
+  height: 280rpx;
+  margin: 250rpx 0 88rpx 0;
+}
+
+.text1 {
+  font-size: 30rpx;
+  padding: 20rpx 0 0 0;
+  color: #3ace57;
+}
+
+/*添加充电卡按钮样式*/
+
+.cardsimple {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35rpx;
+  background-color: #fff;
+}
+
+.cardtotal {
+  font-size: 34rpx;
+  padding: 34rpx 0;
+}
+
+.newcard {
+  color: #1ec678;
+  font-size: 34rpx;
+  padding: 34rpx 0;
+  padding-left: 20rpx;
+}
+
+/*充电列表样式*/
+
+.manager {
+  padding: 0rpx 35rpx 30rpx 35rpx;
+  background: #fff;
+}
+
+.carditemblock {
+  border-radius: 10rpx;
+  padding: 0 30rpx;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx #f0f5f3;
+}
+
+.carditem {
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  padding: 0 30rpx;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx #f0f5f3;
+}
+
+.lighting {
+  position: absolute;
+  right: -10rpx;
+  bottom: -20rpx;
+  width: 100rpx;
+  height: 130rpx;
+}
+
+.lighting image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.carditem .top, .carditemblock .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carditem .top .lf, .carditemblock .top .lf {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+
+}
+
+.carditem .top .rg, .carditemblock .top .rg {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+}
+
+.carditem .top .rg span, .carditemblock .top .rg span {
+  font-size: 32rpx;
+}
+
+.carditem .top image, .carditemblock .top image {
+  width: 50rpx;
+  height: 56rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.carditem .bot, .carditemblock .bot {
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carditem .bot .lf, .carditemblock .bot .lf {
+	font-size: 36rpx;
+}
+
+.carditem .bot .icon-down, .carditemblock .bot .icon-down {
+  margin-top: 25rpx;
+  padding: 0 20rpx;
+}
+
+.carditem .bot .icon-up, .carditemblock .bot .icon-up {
+  margin-top: 25rpx;
+  padding: 0 20rpx;
+}
+
+/*激活和代充按钮*/
+
+.item1 {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 35rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.icon-kefu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.infotype {
+  flex: 1;
+  font-size: 34rpx;
+  color: #333;
+}
+
+.icon-youjiantou {
+  height: 12.5rpx;
+  line-height: 12.5rpx;
+  color: #c9c9c9;
+}
+
+/* 卡片功能的样式 */
+
+.cardfunction {
+  display: flex;
+  color: #1fc678;
+  text-align: center;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  font-size: 26rpx;
+  background: #fff;
+  box-shadow: 0rpx 0rpx 10rpx 2rpx #f0f5f3;
+  position: relative;
+}
+
+.moresuspension {
+  position: absolute;
+  top: 17rpx;
+	background: #414141;
+	opacity: 0.8;
+  right: 0;
+	z-index: 1;
+	color: #fff;
+	border-radius: 20rpx;
+	padding: 0 20rpx;
+}
+
+.moresuspension .in {
+}
+
+.moresuspension .in .shiftto {
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.cardfunction .moresuspension .delete {
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.cardfunction .moresuspension .loss {
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.cardfunction .defaultcardTop {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+/* 挂失弹框样式*/
+
+/* comps/register/index.wxss */
+
+/*模态框*/
+
+.wxapp-modal {
+}
+
+.content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 600rpx;
+  background: #fff;
+  border-radius: 15rpx;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 88;
+  background: rgba(1, 1, 1, 0.6);
+}
+
+.the-title {
+  padding: 40rpx 60rpx 30rpx 60rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 25rpx;
+  right: 25rpx;
+  width: 32rpx;
+  height: 32rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.the-title .tlt {
+  text-align: center;
+  font-size: 35rpx;
+}
+
+.close image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.keyphone {
+  padding: 0 65rpx;
+}
+
+.code {
+  padding: 60rpx 65rpx 90rpx 65rpx;
+  display: flex;
+}
+
+.codechild {
+}
+
+.code-input {
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.input-placeholder {
+  font-size: 35rpx;
+  line-height: 35rpx;
+}
+
+.contactgetcode {
+  display: inline-block;
+  vertical-align: middle;
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #24c771;
+  text-align: center;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+}
+
+.countdownnow {
+  flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #c9c9c9;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+  text-align: center;
+}
+
+.mysubmit {
+  background-color: #24c771;
+  color: #fff;
+}
+
+.covermysubmit {
+  background-color: #24c771;
+  margin-bottom: -10rpx;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+/* 转出样式*/
+
+.cardfunction .rollout, .cardfunction .more {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+}

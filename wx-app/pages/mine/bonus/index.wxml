@@ -1,0 +1,37 @@
+<!--pages/bonus/index.wxml-->
+<view class='header clearfloat'>
+  <view class='balance' data-aaa='123'>收益余额(元)</view>
+  <view class='returns'>{{viewamount/100}}</view>
+
+  <view class='suspension'>
+    <view class='suspension-in'>
+      <view class='Todayearnings'>
+        <view class='earnings' style='border-right:2rpx solid #efeff0;'>{{viewyesterdayAmount / 100}}</view>
+        <view class='describetoday' style='border-right:2rpx solid #efeff0;'>昨日收益</view>
+      </view>
+      <view class='Historicalearnings'>
+        <view class='earnings'>{{viewhistoryAmount/100}}</view>
+        <view class='describeHistory'>历史收益</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class='isolation'></view>
+
+
+<navigator class='item' url='./details/index' open-type="navigate">
+  <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/mingxi@3x.png'></image>
+  <view class='infotype'>明细</view>
+  <view class="iconfont icon-youjiantou "></view>
+</navigator>
+<navigator class='item' url='./transfer/index?availablebalance={{viewamount}}' open-type="navigate">
+  <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/chongzhiqianbao@3x.png'></image>
+  <view class='infotype'>转入余额钱包</view>
+  <view class="iconfont icon-youjiantou "></view>
+</navigator>
+<navigator class='item' url='./withdrawal/index?withdrawalbalance={{viewamount}}' open-type="navigate">
+  <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/tixian@3x.png'></image>
+  <view class='infotype'>提现</view>
+  <view class="iconfont icon-youjiantou "></view>
+</navigator>

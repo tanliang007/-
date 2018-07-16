@@ -1,0 +1,40 @@
+/* pages/mine/topup/topupagreement/index.wxss */
+
+page {
+  padding-bottom: 30rpx;
+  background: #fff;
+}
+
+.tit {
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: bold;
+  margin: 60rpx 0 40rpx 0;
+}
+
+.abc, .bcd, .znb, .olp {
+  padding: 0 30rpx;
+}
+
+.abc text {
+  line-height: 50rpx;
+  font-size: 25rpx;
+}
+
+.bcd text {
+  line-height: 50rpx;
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+.znb text {
+  line-height: 50rpx;
+  font-size: 25rpx;
+}
+
+.olp {
+  margin: 10rpx 0rpx;
+  font-size: 25rpx;
+  text-indent: 30rpx;
+  line-height: 50rpx;
+}

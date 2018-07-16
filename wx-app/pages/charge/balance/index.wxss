@@ -1,0 +1,31 @@
+/* pages/charge/balance/index.wxss */
+
+page {
+    background: #f7f7f7;
+}
+
+.tit {
+    margin-top: 40rpx;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.amount {
+    font-size: 80rpx;
+    color: #fff;
+    margin-top: 10rpx;
+    margin-bottom: 60rpx;
+}
+
+.container {
+    background-color: #24c771;
+}
+
+.top {
+    padding: 42rpx 0 42rpx 42rpx;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}

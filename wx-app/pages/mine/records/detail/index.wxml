@@ -1,0 +1,60 @@
+<!--pages/charging-controls/order-details/index.wxml-->
+<view class='chargearea'>
+  <image class='icon' src='/icons/charging.png'></image>
+  <text class='areaDtl'>{{orderDetail.siteName}}</text>
+</view>
+
+<view class='moneywrapper'>
+  <view class='rmb'>¥ {{consumeAmount ? consumeAmount:0}}</view>
+  <view class='text'>实付金额(元)</view>
+</view>
+
+<view class='common ordernum'>
+  <span class='commonleft'>订单编号</span>
+  <span class='commonright'>{{orderDetail.orderNo?orderDetail.orderNo:0}}</span>
+</view>
+<view class='common totalChild'>
+  <span class='commonleft'>充电时长</span>
+  <span class='commonright'>{{format(orderDetail.actualMinute)}}</span>
+</view>
+
+<view class='common totalChild'>
+  <span class='commonleft'>钱包支付</span>
+  <span class='commonright'>¥ {{orderDetail.balanceAmount/100?orderDetail.balanceAmount/100:0}}</span>
+</view>
+<view class='common totalChild'>
+  <span class='commonleft'>微信支付</span>
+  <span class='commonright'>¥ {{orderDetail.paidAmount/100?orderDetail.paidAmount/100:0}}</span>
+</view>
+
+
+<view class='common actualpay'>
+  <span class='commonleft'>实际消费</span>
+  <span class='commonright'>¥ {{orderDetail.consumeAmount/100?orderDetail.consumeAmount/100:0}}</span>
+</view>
+<view class='common cashback'>
+  <span class='commonleft'>剩余返还</span>
+  <span class='commonright'>¥ {{orderDetail.returnAmount/100?orderDetail.returnAmount/100:0}}</span>
+</view>
+
+<view class='common cashback' >
+  <span class='commonleft'>桩点位置</span>
+  <span class='commonright'>{{orderDetail.siteName + orderDetail.location}}</span>
+</view>
+
+<view class='common cashback'>
+  <span class='commonleft'>充电端口</span>
+  <span class='commonright'>{{orderDetail.pileNo}}号桩{{orderDetail.port}}路端口</span>
+</view>
+
+
+<view wx:if="{{minejump}}">
+  <navigator class='recordback' url='/pages/index/index' open-type="reLaunch">回到首页</navigator>
+</view>
+
+<wxs module="format">
+  module.exports = function(minutes) {
+    console.log(minutes)
+    return (Math.floor(minutes / 60) + "小时" + (minutes % 60) + "分");
+  }
+</wxs>

@@ -1,0 +1,223 @@
+/* pages/master-apply/index.wxss */
+
+/* #24c771 主题色 */
+
+page {
+  background-color: #f7f7f7;
+}
+
+/*占位符颜色*/
+
+.input-placeholder {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  font-weight: 100;
+}
+
+.nav {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  display: -webkit-flex;
+  background-color: #fff;
+}
+
+.default {
+  line-height: 90rpx;
+  text-align: center;
+  flex: 1;
+  -webkit-flex: 1;
+  color: #b5b5b5;
+  font-size: 36rpx;
+  height: 90rpx;
+}
+
+.green {
+  line-height: 90rpx;
+  height: 90rpx;
+  text-align: center;
+  color: #24c771;
+  flex: 1;
+  font-size: 36rpx;
+  position: relative;
+}
+
+.green::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 100rpx;
+  height: 4rpx;
+  background-color: #24c771;
+}
+
+/*姓名 联系方式 所在地 详细地址的公用 */
+
+.name, .code, .detailaddress {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.name {
+  margin-top: 0rpx;
+}
+
+.name-label, .code-label, .detailaddress-label {
+  flex: 0 0 180rpx;
+  -webkit-flex: 0 0 180rpx;
+  font-size: 35rpx;
+}
+
+.name-input, .code-input, .detailaddress-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+	padding-right: 30rpx;
+}
+
+/*联系方式样式*/
+
+.contact {
+  display: flex;
+  display: -webkit-flex;
+  padding: 15rpx 0 15rpx 40rpx;
+  background-color: #fff;
+  margin-top: 1rpx;
+  margin-bottom: 1rpx;
+  align-items: center;
+}
+
+.contact-label {
+  flex: 0 0 180rpx;
+  -webkit-flex: 0 0 180rpx;
+  font-size: 35rpx;
+}
+
+.contact-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 35rpx;
+}
+
+#contactgetcode {
+  flex: 0 0 180rpx;
+  -webkit-flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #24c771;
+  padding: 20rpx;
+  text-align: center;
+  border-left: 2rpx solid #f7f7f7;
+}
+
+#countdownnow {
+  flex: 0 0 180rpx;
+  -webkit-flex: 0 0 180rpx;
+  font-size: 35rpx;
+  color: #c9c9c9;
+  padding: 20rpx;
+  text-align: center;
+  border-left: 2rpx solid #f7f7f7;
+}
+
+/*验证码单独样式 */
+
+.code {
+  margin-top: 3rpx;
+}
+
+/*所在地单独样式 */
+
+.icon-youjiantou {
+  color: #c9c9c9;
+  font-size: 40rpx;
+}
+
+.home {
+  font-size: 35rpx;
+  background-color: #fff;
+  margin: 2rpx 0 1rpx 0;
+}
+
+.home-label {
+  float: left;
+  width: 180rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  padding-left: 40rpx;
+}
+
+#region {
+  height: 104rpx;
+  max-width: 100%;
+  line-height: 104rpx;
+  overflow: hidden;
+}
+
+.homeWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.home-input {
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.icon-youjiantou {
+  flex: 0 0 60rpx;
+  font-size: 35rpx;
+}
+
+/*详细地址单独样式*/
+
+.detailaddress {
+  margin-top: 1rpx;
+}
+
+/* 组织机构代码单独样式 */
+
+.organization {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 30rpx 40rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.organization-label {
+  flex: 0 0 270rpx;
+  -webkit-flex: 0 0 270rpx;
+  font-size: 35rpx;
+}
+
+.organization-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 35rpx;
+}
+
+/*提交按钮的样式*/
+
+.mysubmit {
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #24c771;
+  margin-top: 90rpx;
+  border-radius: 80rpx;
+}
+
+.mysubmitdown {
+  position: relative;
+  top: 6rpx;
+}

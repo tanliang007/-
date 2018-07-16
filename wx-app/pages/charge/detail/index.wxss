@@ -1,0 +1,266 @@
+/* pages/charge-details/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+  padding-bottom: 30rpx;
+}
+
+.equipmentnumber {
+  height: 100rpx;
+  padding: 0 40rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  font-size:30rpx;
+}
+
+.equipmentone {
+  margin: 0 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.equipmentone .num{
+	font-size:32rpx;
+}
+
+.icon-dingwei {
+  color: #38cd5a;
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+
+.chargetitle {
+  height: 70rpx;
+  padding-left: 40rpx;
+  line-height: 70rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.chargingbase {
+  padding: 0rpx 40rpx 30rpx 40rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.port {
+  color: #bcbcbc;
+  font-size: 28rpx;
+  text-align: center;
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 5rpx;
+  border: 1rpx solid #37cc5c;
+  box-sizing: border-box;
+}
+
+.chargingWrapper3  .port {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingWrapper5 .port {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingWrapper8 .port {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingWrapper10 .port {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 15rpx;
+}
+
+.free {
+  color: #1ec678;
+}
+
+.b {
+  color: #7e7e7e;
+  border-radius: 5rpx;
+  border: none;
+  background-color: #f6f6f6;
+}
+
+/* 旧选时间的样式开始 -------------- */
+
+/* .timetitle {
+  height: 70rpx;
+  padding-left: 40rpx;
+  line-height: 70rpx;
+  background-color: #f7f7f7;
+  font-size: 32rpx;
+  color: #b7b7b7;
+}
+
+.chargingtime {
+  padding: 40rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timelength {
+  box-sizing: border-box;
+  background: #f6f6f6;
+  color: #333;
+  width: 32%;
+  margin: 0 0.5%;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.chargingTimeWrapper3  .timelength {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingTimeWrapper5 .timelength {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingTimeWrapper8 .timelength {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+}
+
+.chargingTimeWrapper10 .timelength {
+  flex: 0 0 23%;
+  margin: 0 1%;
+  margin-bottom: 10rpx;
+} */
+
+/* 旧选时间的样式结束 -------------- */
+
+/* 选时长picker样式开始 */
+
+.timepicker {
+  margin-top: 20rpx;
+  display: flex;
+  height: 90rpx;
+  background: #fff;
+  padding: 0 40rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timepicker picker {
+  flex: 1;
+}
+
+.timepicker .icon-youjiantou {
+  font-size: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+
+.timepicker .timepickertlt {
+  font-size: 30rpx;
+}
+
+.timepicker .pker {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.timepicker .pker .defaultcolor {
+  color: #bababa;
+  font-size: 30rpx;
+}
+
+.timepicker .pker .confirmcolor {
+  color: #333;
+  font-size: 36rpx;
+}
+
+.showpaymoney {
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 40rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+  margin-top: 2rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.balancepaymoney {
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 2rpx;
+  display: flex;
+  padding: 0 40rpx;
+}
+
+.balancepaymoney .MinusWallet {
+  color: #e97841;
+  font-size: 36rpx;
+}
+
+.Minus {
+  /* float: right; */
+  font-size: 36rpx;
+  color: #333;
+}
+.Minus  .yuan{
+	font-size: 25rpx;
+	margin-left: 2rpx;
+}
+.icon-youjiantou {
+  font-size: 36rpx;
+  color: #d5d5d5;
+	margin-left: 5rpx;
+}
+
+.shoicon {
+  color: #fff;
+}
+
+/*支付充电按钮*/
+
+.payPoint {
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #24c771;
+  margin-top: 100rpx;
+  border-radius: 80rpx;
+}
+
+.payPointDown {
+  position: relative;
+  top: 6rpx;
+}
+
+.hb{
+	font-size: 25rpx;
+	margin-left: 2rpx;
+}

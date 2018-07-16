@@ -1,0 +1,31 @@
+<!--pages/sites/index.wxml-->
+<view class='manager-header' wx:if='{{hassite}}'>
+  <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nosites.png' class='site'></image>
+  <view class='text1'>暂时没有相关充电站</view>
+</view>
+
+<view class='manager-content' wx:else>
+
+  <view class='manager' data-siteid="{{item.id}}" wx:for="{{siteList}}" wx:key="{{item.id}}" wx:for-index="i" wx:for-item="item" bindtap='navToDetail'>
+    <view class='manager-wrapper{{item.status}}'>
+      <view class='logpic'>
+        <image class='logpic-log' src="{{item.status == 2?'http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/offlinelogo.png':'http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png'}}"></image>
+      </view>
+      <view class='content'>
+        <view class='address'>{{item.name}}</view>
+        <view class='difstatus'>
+          <view class='specifiaddr'>{{item.address}}</view>
+          <view class='stau'>
+            <view class='stauchild'>
+              <view class='staucontent'>{{item.status != 1 ? statuArr[item.status]:''}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='time'>{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<navigator class='tosite' url="./site-create/index" open-type="navigate" hover-class="tosite-hover">我要建站</navigator>

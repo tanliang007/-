@@ -1,0 +1,142 @@
+/* pages/topup/index.wxss */
+
+page {
+  background: #fff;
+	height: 100%;
+}
+
+.topuptitle {
+  height: 100rpx;
+  padding-left: 38rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.topuptitle span {
+  margin-left: 2.5%;
+}
+
+.topupwrapper {
+  background-color: #fff;
+  padding: 38rpx 38rpx 30rpx 38rpx;
+}
+
+.topupAmount {
+  width: 47%;
+  height: 190rpx;
+  line-height: 190rpx;
+  box-sizing: border-box;
+  border: 2rpx solid #28c671;
+  border-radius: 5px;
+  float: left;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+  position: relative; /*父元素给相对定位*/
+}
+
+.topupAmount view {
+  text-align: center;
+}
+
+.chong {
+  font-size: 30rpx;
+  /* line-height: 130rpx; */
+  color: #333;
+  height: 100%;
+}
+
+.chong-child {
+  font-size: 70rpx;
+  line-height: 185rpx;
+}
+
+.song {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  position: absolute;
+  right: -80rpx;
+  top: -80rpx;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: #ff4518;
+  transform: rotate(45deg);
+}
+
+.songxie {
+  position: absolute;
+  bottom: 6rpx;
+  left: 50%;
+  color: #fff;
+  font-size: 22rpx;
+  transform: translateX(-50%);
+}
+
+/*立即支付支付按钮*/
+
+.oncePay {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 36rpx;
+  color: #fff;
+  display: block;
+  background: linear-gradient(to right, #3ace57, #1ec678);
+  margin: 0 auto;
+  margin-top: 22rpx;
+  margin-bottom: 50rpx;
+  border-radius: 100rpx;
+}
+
+.atOncePay {
+  position: relative;
+  top: 6rpx;
+}
+
+.statement {
+  display: block;
+  width: 95%;
+  padding-left: 38rpx;
+  margin: 0 auto;
+  font-size: 25rpx;
+	text-align: center;
+  color: #8c8c8c;
+}
+
+.statementWrapper {
+  color: #1fc687;
+}
+
+/*充值卡充值按钮样式*/
+
+.navtopup-card {
+  margin-top: 15rpx;
+  padding: 0 40rpx;
+  background: #fff;
+}
+
+.topup-card {
+  padding: 26rpx 0;
+}
+
+.topup-cardleft {
+  font-size: 35rpx;
+}
+
+.topup-cardleft span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.topup-cardleft image {
+  width: 50rpx;
+  height: 38rpx;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.topup-card {
+  display: flex;
+  justify-content: space-between;
+}

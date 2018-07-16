@@ -1,0 +1,307 @@
+page {
+  background-color: #f7f7f7;
+  padding-top: 80rpx;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 9;
+}
+
+.searcher {
+  display: flex;
+  padding: 0rpx 30rpx 10rpx 30rpx;
+  background: #24c771;
+  height: 60rpx;
+}
+
+.icon-search {
+  padding:0 10rpx;
+  font-size: 25rpx;
+  height: 60rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  background: #fff;
+  line-height: 61rpx;
+}
+
+.search-hint {
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  flex: 1;
+  font-size: 25rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+}
+
+.tips1 {
+  padding: 30rpx;
+}
+
+.refresh-block {
+}
+
+.loadpng {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.nocontent {
+  text-align: center;
+}
+
+.nocontent text {
+  font-size: 30rpx;
+  color: #999;
+}
+
+/*充电占列表*/
+
+.manager {
+  padding: 30rpx;
+  padding-bottom: 0;
+}
+
+.offlinemanager {
+  padding: 30rpx;
+  padding-bottom: 0;
+  color: #858585;
+}
+
+.manager-wrapper {
+  padding: 22rpx 32rpx;
+  background: #fff;
+}
+
+.manager-wrapper .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.manager-wrapper .top .distancefather {
+  text-align: center;
+}
+
+.manager-wrapper .top .area .name {
+  font-size: 33rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.offlinemanager .manager-wrapper .top .area .name {
+  color: #c0c0c0;
+}
+
+.manager .top .area .wenfather {
+  font-size: 28rpx;
+  color: #858585;
+  margin: 10rpx 0 4rpx 0;
+}
+
+.offlinemanager .top .area .wenfather {
+  font-size: 28rpx;
+  color: #b0b0b0;
+  margin: 10rpx 0 4rpx 0;
+}
+
+.manager-wrapper .top .area .wen {
+  margin-right: 15rpx;
+}
+
+.manager-wrapper .top .rg-child image {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.manager .rg-child .distance {
+  font-size: 25rpx;
+  color: #858585;
+}
+
+.offlinemanager .rg-child .distance {
+  font-size: 25rpx;
+  color: #b0b0b0;
+}
+
+.manager-wrapper .location {
+  display: flex;
+}
+
+.manager-wrapper .location .add {
+  margin-right: 15rpx;
+  white-space: nowrap;
+}
+
+.manager .manager-wrapper .location {
+  color: #858585;
+  font-size: 28rpx;
+  min-height: 80rpx;
+}
+
+.offlinemanager .manager-wrapper .location {
+  color: #b0b0b0;
+  min-height: 80rpx;
+  font-size: 28rpx;
+}
+
+/*  空闲 共计的样式 */
+
+.manager-wrapper .bot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kongxian {
+  font-size: 26rpx;
+  width: 150rpx;
+  color: #2fc66a;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.bot  .pricestyle {
+  width: 150rpx;
+  display: inline-block;
+}
+
+.manager .bot  .pricestyle {
+  font-size: 26rpx;
+  color: #2fc66a;
+}
+
+.offlinemanager .bot  .pricestyle {
+  font-size: 26rpx;
+  color: #b0b0b0;
+}
+
+.offlinemanager .kongxian {
+  font-size: 26rpx;
+  width: 150rpx;
+  color: #b0b0b0;
+  display: inline-block;
+}
+
+.zaichong {
+  font-size: 26rpx;
+  width: 150rpx;
+  display: inline-block;
+  color: #ffaf32;
+  margin-right: 10rpx;
+}
+
+.offlinemanager .zaichong {
+  font-size: 26rpx;
+  width: 150rpx;
+  display: inline-block;
+  color: #b0b0b0;
+}
+
+.kongxian span {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  margin-bottom: 5rpx;
+  border-radius: 50%;
+  background: #2fc66a;
+}
+
+.offlinemanager .kongxian span {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  margin-bottom: 5rpx;
+  border-radius: 50%;
+  background: #d0d0d0;
+}
+
+.zaichong span {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin-bottom: 5rpx;
+  background-color: #ffaf32;
+}
+
+.offlinemanager .zaichong span {
+  display: inline-block;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  margin-bottom: 5rpx;
+  background: #d0d0d0;
+}
+
+.manager-wrapper .bot .singwrapper {
+  background: red;
+  text-align: center;
+}
+
+.signalbgc0 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_0.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc1 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_1.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc2 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_2.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc3 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_3.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc4 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_4.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc5 {
+  display: block;
+  width: 31rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/signal_5.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.xinhao {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}

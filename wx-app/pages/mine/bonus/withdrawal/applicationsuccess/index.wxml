@@ -1,0 +1,14 @@
+<!--pages/index/rob-pileguide/investpile/robpilesuccess/index.wxml-->
+<view>
+  <view class='site'>
+    <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/applicationsuccess.png'></image>
+  </view>
+  <view class='text1'>
+    <view>提现申请成功!</view>
+    <view class='text2'>
+      我们会在尽快将收益转入您的微信钱包,请注意查看哦~
+    </view>
+  </view>
+
+</view>
+<view class='back' bindtap='backToearnlist'  hover-class="back-hover">返回我的收益</view>

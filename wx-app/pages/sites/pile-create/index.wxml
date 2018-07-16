@@ -1,0 +1,77 @@
+<!--pages/pile-create/index.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class='pilepoint'>
+    <label class='pilepoint-label'>桩点编号</label>
+
+    <view class='pilepointWrapper'>
+      <input name="pileNo" type='number' value='{{pileNo}}' class="pilepoint-input" placeholder="扫描桩小程序码" placeholder-class="input-placeholder" />
+    </view>
+    <label class='newPointSao' bindtap='newPointSao'>
+      <image class='newPointSaoPic' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/newPointSao@3x.png' />
+    </label>
+  </view>
+
+  <view class='pilepoint'>
+    <label class='pilepoint-label'>模块编号</label>
+    <view class='pilepointWrapper'>
+      <input name="imei" type='number' value='{{imei}}' class="pilepoint-input" placeholder="扫描模块二维码" placeholder-class="input-placeholder" bindinput='getinpuimei' />
+    </view>
+    <label class='newPointSao' bindtap='newModeNumSao'>
+      <image class='newPointSaoPic' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/newPointSao@3x.png' />
+    </label>
+  </view>
+
+  <!--主动查询桩点信号-->
+  <view class='signalitem'>
+    <view class='signal-label'>查看信号</view>
+    <view class='signalwrapper'>
+      <view class='abc'>
+        <view class='qqn'>
+          <view class='signalbgc{{signal >=0 ? signal:""}}'></view>
+          <view class='signalinfo'> {{signalinfo ? signalinfo:" "}}</view>
+        </view>
+        <view class='querysignal' bindtap='querySignal'>
+          刷新信号
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='port'>
+    <label class='port-label'>端口路数</label>
+    <picker class='port-picker' id='region' mode="selector" range='{{portrange}}' bindchange="bindportChange">
+      <view class='portWrapper'>
+        <input disabled="true" value='{{showport}}' class="port-input" placeholder="请选择端口路数" placeholder-class="input-placeholder" />
+
+        <view class='unit'>
+          <label class='iconfont icon-youjiantou'></label>
+        </view>
+
+      </view>
+    </picker>
+  </view>
+  <!--新增加的地址选择-->
+  <view class='siteaddr' bindtap="chooseSiteAddr">
+    <label class='siteaddr-label'>桩点地址</label>
+    <view class="siteaddr-input" type="text" placeholder-class="input-placeholder">{{siteaddr}}</view>
+    <input class="siteaddr-input" value='{{siteaddr}}' disabled="true" style='display:none;'></input>
+    <view class='siteaddr-choose'>
+      <text hidden='{{hassiteaddr}}'>请选择</text>
+      <label class='iconfont icon-youjiantou'></label>
+    </view>
+  </view>
+
+  <view class='pilepoint'>
+    <label class='pilepoint-label'>位置描述</label>
+    <view class='pilepointWrapper'>
+      <textarea name="location" value='{{location}}' class="pilepoint-input" placeholder="请输入详细地址" placeholder-class="input-placeholder" maxlength="40" auto-height="true" />
+    </view>
+  </view>
+
+  <view style='padding:20rpx 0 0 240rpx;font-size:30rpx;color:#c9c9c9;'>
+    <text>如:122栋地下室车库\n 122栋地上B去1120</text>
+  </view>
+  <button hover-class='savePointDown' class="savePoint" formType="submit">保存</button>
+</form>

@@ -1,0 +1,40 @@
+<view class='cardname'>
+  <image src='../../../../icons/myaccount@3x.png'></image> 
+  <input placeholder='请输入10位卡号' maxlength="10" type='number' value='{{viewCardNum}}' bindinput="getcardNumber" class='cardname-input'></input>
+
+  <!-- <view class='saocard' bindtap='saocard'>
+    <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/newPointSao@3x.png  '></image>
+  </view> -->
+
+</view>
+
+<view class='topuptitle'>
+  <view class='titleleft'>
+    <span>代充金额</span>
+  </view>
+  <view class='titleright' bindtap='navTobalancetop'>
+  </view>
+</view>
+<view class='topupwrapper clearfloat'>
+  <view class="topupAmount" data-curtopupindex="{{index}}" data-id="{{item.id}}" style="background:{{curtopup===index?'linear-gradient(to bottom, #3ace57,#1ec678)':''}};color:{{curtopup === index?'#fff':''}};margin-right:{{(index+1) % 2 == 0 ? 0 :'6%'}};border:{{curtopup===index ? '1rpx solid #fff':'1rpx solid #28c671'}}"
+    wx:key="id" wx:for="{{topupType}}" bindtap='ontapTopup'>
+    <view>
+      <view class='chong' style="color:{{curtopup === index?'#fff':''}};">
+        <text class='chong-child'>{{item.rechargeAmount/100}}</text>
+        <text class='chong-unit'>元</text>
+      </view>
+      <view class='song' style="color:{{curtopup === index?'#fff':''}};" wx:if="{{item.bonusAmount > 0}}">
+        <view class='songxie'>
+          送{{item.bonusAmount/100}}元
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view style='padding:0 38rpx;'>
+	<view hover-class='atOncePay' bindtap='nowPay' id="{{cardinputlength ?'oncePay':'graypay'}}">立即充值</view>
+</view>
+<div class='statement'>点击立即充值,即表示你已经同意
+  <span class='statementWrapper' bindtap='navTotopupagreement'>《充值活动协议》</span>
+</div>
+

@@ -1,0 +1,61 @@
+<!--pages/site-create/index.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+  <view class='sitename'>
+    <label class='sitename-label'>站点名称</label>
+    <input class="sitename-input" value='{{sitename}}' name="name" placeholder="请以小区名称或者建筑名称命名" type="text" placeholder-class="input-placeholder" />
+  </view>
+
+  <view class='siteaddr' bindtap="chooseSiteAddr">
+    <label class='siteaddr-label'>站点地址</label>
+    <view class="siteaddr-input" type="text" placeholder-class="input-placeholder">{{siteaddr}}</view>
+    <input class="siteaddr-input" value='{{siteaddr}}' disabled="true" name="fullAddress" style='display:none;'></input>
+    <view class='siteaddr-choose'>
+      <text hidden='{{hassiteaddr}}' style='color:#333;'>请选择</text>
+      <label class='iconfont icon-youjiantou'></label>
+    </view>
+  </view>
+
+  <view class='powerrate'>
+    <label class='powerrate-label'>计费价格</label>
+    <!-- <picker class='powerrate-picker' id='region' mode="selector" range='{{pricerange}}' bindchange="bindPowerChange">
+      <view class='powerrateWrapper'>
+        <input disabled="true" value='{{showPricePerHour}}' class="powerrate-input" placeholder="请选择计费价格" placeholder-class="input-placeholder" />
+        <view class='unit'>
+          <text>元/小时</text>
+          <label class='iconfont icon-youjiantou'></label>
+        </view>
+      </view>
+    </picker> -->
+		<input class="sitename-input"  name="pricePerHour" placeholder="请输入(0.00-3.00)之间" type="digit" placeholder-class="input-placeholder" />
+		<view style='padding-right: 40rpx;font-size: 30rpx;color: #333;line-height:30rpx;'>元/小时</view>
+  </view>
+
+  <view class='wrapp'>
+    <view class='relatedadmin'>
+      <label class='relatedadmin-label'>关联物业</label>
+      <switch  bindchange="switchChange" class='switch' />
+    </view>
+
+      <view style='display:{{switchadmin?"block":"none"}};'>
+				<view class='guanlicontact' >
+        <label class='guanlicontact-label'>物业账号</label>
+        <input  class="guanlicontact-input" value='{{landowner}}' maxlength='11' type='number' name="landowner" placeholder="请输入管理员手机号" placeholder-class="input-placeholder" />
+      </view>
+			
+      <view class='percentage' >
+        <label class='percentage-label'>物业收益</label>
+        <input class="percentage-input" value='{{landFeeRate}}' name="landFeeRate" maxlength="2" placeholder="请输入收益比例" type="number" placeholder-class="percentage-placeholder" />
+				<view style='padding-right: 40rpx;color: #333;font-size: 35rpx;'>
+					%
+				</view>
+      </view>
+			</view>
+
+
+
+  </view>
+
+  <button hover-class='mysubmitdown' class="mysubmit" formType="submit">提交审核 </button>
+
+</form>

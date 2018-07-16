@@ -1,0 +1,30 @@
+/* pages/index/rob-pile/index.wxss */
+
+page {
+  border: 1px solid transprent;
+}
+
+image {
+  width: 100%;
+  display: block;
+}
+
+.include {
+  position: absolute;
+  left: 0%;
+  top: 738rpx;
+  width: 100%;
+}
+
+.navToRob {
+  color: #fff;
+  font-size: 45rpx;
+  display: block;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/becomepilebtnbgc.png');
+  background-size: 100% 100%;
+  width: 420rpx;
+  text-align: center;
+  margin: 0 auto;
+  height: 90rpx;
+  line-height: 90rpx;
+}

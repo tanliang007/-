@@ -1,0 +1,23 @@
+<view class='topupwrapper clearfloat'>
+  <view class="topupAmount" data-curtopupindex="{{index}}" data-id="{{item.id}}" style="background:{{curtopup===index?'linear-gradient(to bottom, #3ace57,#1ec678)':''}};color:{{curtopup === index?'#fff':''}};margin-right:{{(index+1) % 2 == 0 ? 0 :'6%'}};border:{{curtopup===index ? '2rpx solid #fff':'2rpx solid #28c671' }};" wx:key="id" wx:for="{{topupType}}" bindtap='ontapTopup'>
+    <view>
+      <view class='chong' style="color:{{curtopup === index?'#fff':''}};">
+				<text class='chong-child'>{{item.rechargeAmount/100}}</text>
+				<text class='chong-unit'>元</text>
+			</view>
+      <view class='song' style="color:{{curtopup === index?'#fff':''}};" wx:if="{{item.bonusAmount > 0}}">
+				<view class='songxie'>
+					送{{item.bonusAmount/100}}元
+				</view>
+			</view>
+    </view>
+  </view>
+</view>
+
+<view style='padding:0 38rpx;'>
+	<button hover-class='atOncePay' class="oncePay" bindtap='nowPay'>立即充值</button>
+</view>
+<div class='statement'>点击立即充值,即表示你已经同意
+  <span class='statementWrapper' bindtap='navTotopupagreement'>《充值活动协议》</span>
+</div>
+

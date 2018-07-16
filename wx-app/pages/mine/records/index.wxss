@@ -1,0 +1,73 @@
+/* pages/records/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.recordwrapper {
+  display: flex;
+  padding: 40rpx 20rpx;
+  background: #fff;
+	margin-bottom: 2rpx;
+}
+
+.logo {
+  flex: 0 0 60rpx;
+  padding-top: 6rpx;
+}
+
+.icon-dingwei {
+  font-size: 50rpx;
+  color: #38cd5a;
+}
+
+.content {
+  flex: 1;
+}
+
+.area {
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+  color: #333;
+}
+
+.deductions {
+  float: right;
+  font-size: 46rpx;
+  color: #333;
+  font-weight: bold;
+}
+.recordcreatime{
+	display: flex;
+	justify-content: space-between;
+}
+
+.detailaddr {
+	padding-right: 30rpx;
+  font-size: 26rpx;
+  color: #bababa;
+}
+
+.thattime {
+  font-size: 26rpx;
+  color: #bababa;
+	white-space:nowrap;
+}
+
+.icon-qiandai {
+  font-size: 80rpx;
+  color: #e97841;
+}
+
+.refresh-block{
+}
+
+.loadpng{
+	width: 50rpx;
+	height: 50rpx;
+	margin: 0 auto;
+	display: block;
+}
+.nocontent{
+	text-align: center;
+}

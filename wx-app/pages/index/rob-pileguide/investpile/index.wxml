@@ -1,0 +1,54 @@
+<!--pages/index/rob-pileguide/investpile/index.wxml-->
+<view class='bigbgc'>
+  <image class='robpilepic' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/robpilepic.png'></image>
+
+	<!-- 股份进度条 -->
+  <view class='progress'>
+    <view class='{{ itemName == 1   ? "progresspart" : "nonepart" }} ' wx:for-index="idx" wx:for-item="itemName" wx:for="{{sharearry}}">
+
+    </view>
+  </view>
+
+
+  <view class='serial'>
+    <view class='serialtlt'>编号</view>
+    <view>{{robinfo.pileNo}}</view>
+  </view>
+
+  <view class='area'>
+    <view class='areatlt'>地址</view>
+    <view>{{robinfo.location}}</view>
+  </view>
+
+  <view class='shopcar'>
+    <view class='shopcar-price'>
+      <span class='unit'>¥</span>{{numberOfShares*price}}
+    </view>
+    <view>
+
+      <view class='minandplus'>
+        <view class='minpic' bindtap='minus'>
+          <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/robminus.png'></image>
+        </view>
+        <view class='nums'>{{numberOfShares}}</view>
+        <view class='pluspic' bindtap='plus'>
+          <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/robplus.png'></image>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='surplus'>
+    可获得充电桩每日收入的{{numberOfShares*5}}%
+  </view>
+
+</view>
+<!-- gouxuan@3x -->
+
+<view class='clause'>
+  <image bindtap='agreeprotocol' src="{{hastapAgreeprotocol ? 'http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/gouxuan@3x.png' : 'http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/weixuan@3x.png' }}"></image>
+  <view class='clausetxt'><span bindtap='agreeprotocol'>已阅读并同意</span><span class="quotes">《抢注桩主协议》</span> </view>
+</view>
+
+<button class='surebtn' hover-class='surebtnhover' bindtap='sureInvest'>确定</button>

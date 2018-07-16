@@ -1,0 +1,44 @@
+<view class='header clearfloat'>
+  <view>
+    <view class='totalreturn'>总收益(元)</view>
+    <view class='earnings'>{{totalAmount/100}}</view>
+  </view>
+</view>
+
+<view class='tips'>已抢注桩点</view>
+
+<view class='wrapper'>
+  <view wx:for="{{list}}" wx:key="{{item.id}}" class='list-item' bindtap='navToreturndetails' data-id="{{item.id}}">
+    <view class='logpic'>
+      <image class='logpic-log' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png'></image>
+    </view>
+
+    <view style="margin-right:45rpx;">
+
+      <view class='number'>
+        <view class='number-tlt'>编号</view>
+        <view>{{item.pileNo}}</view>
+      </view>
+
+      <view class='area'>
+        <view class='area-tlt'>地址</view>
+        <view>{{item.location}}</view>
+      </view>
+
+      <view class='date'>
+        {{item.date}}
+      </view>
+
+    </view>
+
+    <view class='money'>
+      <view class='money-fr'>
+				<span>￥</span>{{item.historyAmount/100}}
+			</view>
+    </view>
+
+  </view>
+</view>
+
+
+<navigator class='robpileearingbtn' hover-class='robpileearingbtnhover' url='/pages/index/rob-pileguide/robpile/index'>抢注</navigator>

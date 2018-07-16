@@ -1,0 +1,190 @@
+/** 头部 **/
+
+.header {
+  position: relative;
+  display: block;
+}
+
+.user-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+
+.searcher {
+  position: absolute;
+  background: #eee;
+  top: 10rpx;
+  bottom: 0;
+  left: 100rpx;
+  right: 100rpx;
+  border-radius: 10rpx;
+  height: 60rpx;
+  overflow: hidden;
+}
+
+.searcher-wapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-icon {
+  padding: 0rpx 10rpx 0 20rpx;
+}
+
+.search-hint {
+  font-size: 25rpx;
+  color: lightgray;
+}
+
+.search-change {
+  color: #333;
+  font-size: 25rpx;
+  position: relative;
+  top: 6rpx;
+  left: 45rpx;
+}
+
+.right-btn {
+  background: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nearsitelogo.png') no-repeat;
+  position: absolute;
+  background-size: 100% 100%;
+  top: 15rpx;
+  right: 25rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border: none;
+  background-color: #fff;
+}
+
+button::after {
+  border: none;
+}
+
+.right-btn image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.main {
+  position: fixed;
+  top: 90rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 点击桩弹出的提示文本 */
+
+.tip {
+  width: 90%;
+  background: #fff;
+  position: fixed;
+  bottom: 150rpx;
+  left: 50%;
+  padding: 30rpx 0 30rpx 30rpx;
+  transform: translateX(-50%);
+  border-radius: 10rpx;
+  border: 1rpx solid #d7d6dd;
+  box-shadow: 0rpx 10rpx 20rpx -10rpx #e5e5e5;
+}
+
+.tip-left {
+  font-size: 30rpx;
+  /* margin-right: 200rpx; */
+}
+
+.tip-right {
+  height: 100%;
+  font-size: 30rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200rpx;
+}
+
+.placenames {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.usage {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.using {
+  color: #29c96b;
+}
+
+.total {
+  color: #8b8b8b;
+  padding-right: 10rpx;
+  width: 100rpx;
+}
+
+.detailaddr {
+  color: #8b8b8b;
+}
+
+.detailaddr {
+  color: #737373;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-line;
+  line-height: -30rpx;
+}
+
+.tip-right {
+  color: #737373;
+  text-align: center;
+}
+
+.placeicon {
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10rpx;
+}
+
+.placeicon-text {
+  display: inline-block;
+}
+
+.navarrow {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  margin: 0 auto 25rpx;
+}
+
+/*跑马灯  */
+
+.marquee {
+  position: fixed;
+	top:110rpx;
+}
+
+.marquee-text {
+  font-size: 20px;
+  /* white-space: nowrap; */
+}
+
+.marquee-item {
+  display: inline-block;
+}
+
+.redbao{
+	width:60rpx;
+	height: 116rpx;
+	position: fixed;
+	top:150rpx;
+	left:30rpx;
+	z-index: 3;
+	background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/honbao@3x.png');
+	background-size: 100% 100%;
+}

@@ -1,0 +1,55 @@
+<!--pages/index/site-detail/index.wxml-->
+<view class='manager'>
+  <view class='manager-wrapper'>
+    <view class='logpic'>
+      <image class='logpic-log' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png'></image>
+    </view>
+    <view class='content'>
+      <view class='address'>{{sitedetail.name}}</view>
+      <view class='specifiaddr'>{{sitedetail.address}}</view>
+      <view class='time&admin'>
+        <text style='margin-right:15rpx;'>充电费:{{sitedetail.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='pilelist' wx:for="{{pilepointList}}" wx:if="{{pilepointList.length}}">
+  <view style='padding: 10rpx 0 10rpx 40rpx;background:#fff;' bindtap='navToChargedetail' data-pileNo="{{item.pileNo}}"  data-online="{{item.online}}">
+    <view class='serialnum'>
+      <text class='serialnum-txt' style="{{item.online?'color:#515151;':'color:#e8e8e8;'}}">编号</text>
+
+      <text class='serialnum-txt2' style="{{item.online?'color:#525252;':'color:#e8e8e8;'}}">{{item.pileNo}}</text>
+    </view>
+    <view class='serialnum'>
+      <text class='serialnum-txt'style="{{item.online?'color:#515151;':'color:#e8e8e8;'}}">地址</text>
+      
+      <text class='serialnum-txt2'style="{{item.online?'color:#525252;':'color:#e8e8e8;'}}">{{item.location}}</text>
+    </view>
+    <view class='addr'>
+      <text class='addr-txt'></text>
+      <view class='addr-txt2'>
+        <span class='kongxian' style="{{item.online?'color: #2bc66e;':'color: #e8e8e8;'}}">  
+          <span style="{{item.online?'background-color:#24c771;':'background-color:#e8e8e8;'}}"></span> 空闲{{item.avaliable}}个
+        </span>
+        <span class='zaichong' style="{{item.online?'color: #ffaf32;':'color: #e8e8e8;'}}">
+          <span style="{{item.online?'background-color:#ffb94b;':'background-color:#e8e8e8;'}}"></span> 共{{item.total}}个
+        </span>
+				<view class='signalbgc{{item.signal}}'></view>	
+      </view>
+    </view>
+    <view class='gochargedetail' catchtap='navTopile'  data-online="{{item.online}}" data-targetlat="{{item.latitude}}" data-targetlng="{{item.longitude}}">
+      <view style='display:flex; align-items:center;width:100%;height:100%;justify-content: center;'>
+        <view>
+          <image src='{{ item.online ?"http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/navarrow.png" :"http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/offlinenavarrow.png"}}'></image>
+					<view style='{{item.online ?"color:#24c771;margin-top:10rpx;":"color:#e8e8e8;margin-top:10rpx;text-align:center;"}}'>{{item.distance}}</view>
+          <view style='{{item.online ?"color:#24c771;margin-top:10rpx;":"color:#e8e8e8;margin-top:10rpx;text-align:center;"}}'>{{item.online ?"":"已离线"}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{ nopilepointlist }}">
+	<image style="width: 245rpx;height: 300rpx;margin: 100rpx auto 70rpx auto;display: block;" src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nosite.png'></image>
+	<view style="text-align: center;color: #3dca75;font-size: 26rpx;margin-top: 40rpx">站主比较懒,还没有建立充电桩~</view>
+</view>

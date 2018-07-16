@@ -1,0 +1,78 @@
+<!--pages/index/rob-pileguide/robpile/index.wxml-->
+<view class='header'>
+  <view class='searcher'>
+    <span class='iconfont icon-search'></span>
+    <input class="search-hint" placeholder='请输入搜索内容' value="{{searchValue}}" bindinput="searchValueInput">{{searchRes}}</input>
+  </view>
+</view>
+
+<block>
+  <view class='robwrapper'>
+    <view class=' {{item.sponsors == 10 ? "nonesharepileitem" : "robpileitem"}}' wx:for="{{robSiteList}}" wx:key="{{item.id}}">
+      <view class='logpic'>
+        <image class='logpic-log' src='{{ item.sponsors == 10 ?"http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nonesharesitelog.png" : "http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png "}}'></image>
+      </view>
+
+      <view class='pileinfo'>
+        <view class='serial'>
+          <view class='serialtlt'>编号</view>
+          <view>{{item.pileNo}}</view>
+        </view>
+
+        <view class='area'>
+          <view class='areatlt'>地址</view>
+          <view>{{item.location}}</view>
+        </view>
+        <view class='progress'>
+          <view class='{{ itemName == 1  ? "progresspart" : "nonepart" }} ' wx:for-index="idx" wx:for-item="itemName" wx:for="{{format(item.sponsors)}}">
+          </view>
+        </view>
+      </view>
+
+      <view id='robbtn'>
+        
+
+					 <view class='distance'  catchtap='navToSite' data-siteinfo="{{item}}">
+            <view class='distancenumber'>{{item.distance}}</view>
+          </view>
+          <view class='text' bindtap='navtooInvestPile' data-robinfo="{{item}}">
+            <view class='textinfo'>{{item.sponsors == 10 ? "已抢光":"占桩"}}</view>
+          </view>
+		
+
+      </view>
+
+    </view>
+
+  </view>
+
+</block>
+
+
+
+
+<view class="tips1">
+  <view class="refresh-block" wx:if="{{loading}}" animation="{{refreshAnimation}}">
+    <image class='loadpng' src="http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/loader.png"></image>
+  </view>
+  <view wx:if="{{hasMore}}" class='nocontent'>
+    <text>没有更多内容了</text>
+  </view>
+</view>
+
+
+
+<view wx:if="{{norobSiteList}}">
+  <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nosite.png' style='width:300rpx;height:360rpx;margin:100rpx auto 70rpx auto;display:block; '></image>
+  <view style='text-align:center;color:#3dca76;font-size:32rpx;'>附近暂无收益桩</view>
+</view>
+<wxs module="format">
+  module.exports = function(sponsors) {
+    var arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for (var i = 0; i < sponsors; i++) {
+      arr[i] = 1
+    }
+		arr.reverse()
+    return arr
+  }
+</wxs>

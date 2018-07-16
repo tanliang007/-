@@ -1,0 +1,26 @@
+<!--pages/mine/bonus/transfer/index.wxml-->
+<view class='tipcontainer'>
+  <image src='../../../../icons/icon_zhuanru@3x.png'></image>
+  <view class='tlt'>
+    <view class='a'>{{cardNum}}</view>
+    <view class='b'>{{type == 0 ? "转出到钱包余额" : "转入到电卡余额"}}</view>
+  </view>
+</view>
+
+<view class='inputtransfer'>
+  <view class='transfer'>{{type == 0 ? "转出金额" : "转入金额"}}</view>
+  <view class='keytransfer'>
+    <view class='symbol'>¥</view>
+    <input class="keytransfer-input" value='{{inputbalance}}' placeholder="" type="digit" placeholder-class="input-placeholder" bindinput="input" />
+  </view>
+  <view class='keyong' class="{{wrong?'red':'gray'}}">
+    <view wx:if="{{wrong}}">
+      {{wrongResult}}
+    </view>
+    <view wx:else>
+      {{Result}}
+    </view>
+  </view>
+</view>
+<view class='tip'>提示: {{type == 0 ? "电卡余额将转入到钱包余额" : "钱包余额将转入到电卡余额"}}</view>
+<button hover-class='suredown' class="sure" bindtap='sure'>提交</button>

@@ -1,0 +1,11 @@
+<!--pages/charge/balance/index.wxml-->
+<view class='container'>
+  <view class='tit'>当前余额(元)</view>
+  <view class='amount'>{{balance/100}}</view>
+</view>
+
+<view class='top'  bindtap='naVtopAmount'>
+  <view>去充值</view>
+  <view style='margin-right:35rpx;color:gray;' class="iconfont icon-youjiantou "></view>
+</view>
+<!-- url='/pages/mine/topup/index' -->

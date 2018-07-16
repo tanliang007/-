@@ -1,0 +1,194 @@
+/* pages/site-create/index.wxss */
+
+/* pages/master-apply/index.wxss */
+
+/* #24c771 主题色 */
+
+page {
+  background-color: #f7f7f7;
+}
+
+/*占位符颜色*/
+
+.input-placeholder {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  font-weight: 100;
+	line-height: 30rpx;
+}
+
+.sitename {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.sitename-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.sitename-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+}
+
+/*站点地址*/
+.siteaddr {
+  display: flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.siteaddr-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.siteaddr-input {
+  font-size: 30rpx;
+  flex: 1;
+}
+
+.siteaddr-choose {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 100;
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-youjiantou {
+  margin-left: 5rpx;
+}
+
+/*充电费*/
+
+.powerrate {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  align-items: center;
+}
+
+.powerrate-picker {
+  flex: 1;
+}
+
+.powerrateWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.powerrate-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.powerrate-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+}
+
+.unit {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  font-weight: 100;
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+/*关联管理员*/
+
+.relatedadmin {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-top: 2rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.relatedadmin-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.switch {
+  padding-right: 30rpx;
+}
+
+.relatedadmin-input {
+}
+
+.guanlicontact, .percentage {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.guanlicontact-label, .percentage-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.guanlicontact-input, .percentage-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+}
+
+.percentage-input {
+  /* flex: 0 0 100rpx; */
+  font-size: 30rpx;
+}
+
+.percentage-placeholder {
+}
+
+.instructions {
+  float: right;
+  margin-top: 33rpx;
+  margin-right: 80rpx;
+  color: #818181;
+  font-size: 30rpx;
+}
+
+.instructions-wrapper {
+  color: #c9c9c9;
+  margin-left: 20rpx;
+}
+
+/*提交按钮的样式*/
+
+.mysubmit {
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #24c771;
+  margin-top: 90rpx;
+  border-radius: 80rpx;
+}
+
+.mysubmitdown {
+  position: relative;
+  top: 6rpx;
+}
+

@@ -1,0 +1,43 @@
+<view class='list-item'>
+  <view class='logpic'>
+    <image class='logpic-log' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png'></image>
+  </view>
+
+  <view style="margin-right:45rpx;">
+
+    <view class='number'>
+      <view class='number-tlt'>编号</view>
+      <view>{{detailArray.pileNo}}</view>
+    </view>
+
+    <view class='area'>
+      <view class='area-tlt'>地址</view>
+      <view>{{detailArray.address}}</view>
+    </view>
+
+  </view>
+</view>
+
+<view class='registeredamount'>
+  <view class='amount'>抢注金额</view>
+  <view class='num'>
+    <span style="font-size:30rpx;vertical-align:middle;">¥ </span>
+    <span style="font-size:35rpx;vertical-align:middle;">{{ detailArray.capital == undefined ? 0 : detailArray.capital/100}}</span>
+  </view>
+</view>
+
+<view class='historicalearnings'>
+  <view class='earnings'>历史收益</view>
+  <view class='num'>
+    <span style="font-size:30rpx;vertical-align:middle;">¥ </span>
+    <span style="font-size:35rpx;vertical-align:middle;">{{detailArray.amount == undefined ? 0 : detailArray.amount/100}}</span>
+  </view>
+</view>
+
+<!-- 收益明显 -->
+<view class='earndetail' bindtap='navTodetaillist'>
+  <view class='infotype'>收益明细</view>
+  <view class="iconfont icon-youjiantou"></view>
+</view>
+
+<button class='rollout' hover-class='rollouthover'>转出本金</button>

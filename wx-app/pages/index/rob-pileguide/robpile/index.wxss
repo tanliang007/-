@@ -1,0 +1,195 @@
+/* pages/index/rob-pileguide/robpile/index.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.robwrapper {
+  /* padding: 0 20rpx; */
+  margin-top: 85rpx;
+}
+
+/* 中间的宽度  */
+
+.pileinfo {
+  /* width: 400rpx; */
+  box-sizing: border-box;
+}
+
+.robpileitem {
+  display: flex;
+  background: #fff;
+  padding: 25rpx;
+  justify-content: space-between;
+  margin-top: 2rpx;
+}
+
+/* 不能抢的父类名 */
+
+.nonesharepileitem {
+  display: flex;
+  background: #fff;
+  padding: 25rpx;
+  margin-top: 2rpx;
+}
+
+.logpic {
+  flex: 0 0 90rpx;
+  height: 130rpx;
+  margin-right: 35rpx;
+}
+
+.logpic-log {
+  width: 100%;
+  height: 100%;
+}
+
+.serial {
+  display: flex;
+  font-size: 26rpx;
+  color: #525252;
+  line-height: 28rpx;
+}
+
+.serialtlt {
+  white-space: nowrap;
+  margin-right: 15rpx;
+  color: #515151;
+}
+
+.area {
+  display: flex;
+  font-size: 26rpx;
+  line-height: 32rpx;
+  margin: 10rpx 0 20rpx 0;
+  color: #525252;
+}
+
+.areatlt {
+  white-space: nowrap;
+  margin-right: 15rpx;
+  color: #515151;
+}
+
+#robbtn {
+  flex: 1;
+  font-size: 32rpx;
+  display: flex;
+	flex-flow:column;
+	justify-content:space-between;
+	margin-left: 10rpx;
+}
+
+#robbtn .distance {
+  text-align: center;
+	align-self:flex-end;
+}
+
+#robbtn  .text {
+	align-self:flex-end;
+}
+
+#robbtn  .text .textinfo {
+  background: #21c775;
+  width: 100rpx;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nonesharepileitem #robbtn  .text .textinfo {
+   background: #e9e9e9; 
+}
+
+#robbtn  .distance {
+  /* height: 50%; */
+	padding: 30rpx 0;
+}
+
+#robbtn  .distance .distancenumber {
+	font-size:30rpx;
+  white-space: nowrap;
+}
+
+/* 抢庄份数的盒子 */
+.progress {
+  position: relative;
+  display: flex;
+}
+
+.progresspart {
+  background-color: #e9e9e9;
+  height: 24rpx;
+  width: 12rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+}
+
+.nonepart {
+  height: 24rpx;
+  width: 12rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  background: #32c960;
+}
+
+/* 搜索框样式  */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 9;
+}
+
+.searcher {
+  display: flex;
+  padding: 0rpx 30rpx 10rpx 30rpx;
+  background: #24c771;
+}
+
+.icon-search {
+  padding: 0 10rpx;
+  font-size: 25rpx;
+  height: 60rpx;
+  background: #fff;
+  line-height: 61rpx;
+  border-top-left-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+}
+
+.search-hint {
+  flex: 1;
+  font-size: 25rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #fff;
+  border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+/* 加载更多样式  */
+
+.tips1 {
+  padding: 30rpx;
+}
+
+.loadpng {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+  display: block;
+}
+
+.nocontent {
+  text-align: center;
+}
+
+.nocontent text {
+  font-size: 30rpx;
+  color: #999;
+}

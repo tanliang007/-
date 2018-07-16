@@ -1,0 +1,69 @@
+<!--pages/withdrawal/index.wxml-->
+<!-- <view class='curbankview' bindtap='showBankPicker'>
+  <image class='icon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/me-earnings@3x.png'></image>
+  <view class='bkinfo'>
+    <view>{{banknameSend}}</view>
+    <view class='bkinfo_b'>尾号6761储蓄卡</view>
+  </view>
+  <view class="iconfont icon-youjiantou "></view>
+</view> -->
+<form report-submit="true" bindsubmit="startCharge">
+
+<view class='payee'>
+  <view class='payee-label'>
+    <image src='../../../../icons/payee.png' mode='aspectFit'></image>
+  </view>
+  <input class="payee-input"  name="realName" placeholder="请填写收款人真实姓名" type="text" placeholder-class="input-placeholder" />
+</view>
+
+<view class='inputamount'>
+  <view class='amount'>提现金额</view>
+  <view class='keyamount'>
+    <view class='symbol'>¥</view>
+    <input class="keyamount-input" placeholder-class="input-placeholder" type="digit" bindinput="input" value='{{inputbalance}}' />
+    <view class='allturnout' bindtap='allTurnOut'>
+      全部转出
+    </view>
+  </view>
+  <view class='miaoshu'>
+    <view class='a' class="{{wrong?'red':'gray'}}">
+      <view wx:if="{{wrong}}">
+        {{wrongResult}}
+      </view>
+      <view wx:else>
+        {{Result}}
+      </view>
+    </view>
+    <view class='b'> 提现手续费{{remitFee}}元/一笔</view>
+  </view>
+</view>
+
+<view class='{{wrong? "hidden":"show"}} actualtoaccount'>实际到账: {{actualtoaccount}}</view>
+<view class='tips'>
+	<view class='title'>提示: 姓名为微信实名认证用的姓名,提现到微信钱包</view>
+</view>
+<button hover-class='suredown'   formType="submit" class="sure" >确定</button>
+
+</form>
+
+<!--弹框和遮罩-->
+<!-- <view class='choosenbank' wx-if='{{Bankflag}}'>
+  <view class='surebank' bindtap='surebank'>选择银行卡</view>
+  <picker-view indicator-style="height: 60px;" class='pick' bindchange="bindChange">
+
+    <picker-view-column>
+      <view wx:for="{{banks}}" wx:key="{{index}}" class='column'>
+        <image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/bind.png' style='width:60rpx;height:60rpx;float:left;	margin-top: 12px;margin-right:16rpx;'></image>
+        <view class='bankinfo'>
+          <view style='font-size:30rpx;height:20px;'>{{item}}</view>
+          <view style='font-size:30rpx;height:20px;'>尾号6764储蓄卡</view>
+        </view>
+      </view>
+    </picker-view-column>
+
+  </picker-view>
+  <view class='addcard'>添加银行卡</view>
+</view>
+
+<view class='mask' bindtap='controlMask' wx-if='{{Bankflag}}'>
+</view> -->

@@ -1,0 +1,247 @@
+/* pages/pile-create/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.pilepoint {
+  background-color: #fff;
+  padding: 33rpx 0;
+  margin-bottom: 2rpx;
+  position: relative;
+}
+
+.pilepoint-label {
+  float: left;
+  width: 200rpx;
+  font-size: 34rpx;
+  padding-left: 40rpx;
+}
+
+.pilepointWrapper {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+}
+
+.pilepoint-input {
+  flex: 1;
+  padding-right: 100rpx;
+  font-size: 30rpx;
+}
+
+.newPointSao {
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  font-size: 30rpx;
+  color: #c9c9c9;
+}
+
+.newPointSaoPic {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/*选择端口路数问题*/
+
+.port {
+  display: flex;
+  display: -webkit-flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-top: 3rpx;
+  margin-bottom: 2rpx;
+  align-items: center;
+}
+
+.port-picker {
+  flex: 1;
+}
+
+.portWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.port-label {
+  flex: 0 0 200rpx;
+  font-size: 34rpx;
+}
+
+.port-input {
+  flex: 1;
+  -webkit-flex: 1;
+  font-size: 30rpx;
+}
+
+.unit {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  font-weight: 100;
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+/* 选择桩点地址样式 */
+
+.siteaddr {
+  display: flex;
+  padding: 27rpx 0 27rpx 40rpx;
+  background-color: #fff;
+  margin-bottom: 3rpx;
+  align-items: center;
+}
+
+.siteaddr-label {
+  flex: 0 0 200rpx;
+  font-size: 35rpx;
+}
+
+.siteaddr-input {
+  font-size: 30rpx;
+  flex: 1;
+}
+
+.siteaddr-choose {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  font-weight: 100;
+  padding-right: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-youjiantou {
+  margin-left: 5rpx;
+}
+
+/* 信号样式  */
+
+.signalbgc {
+  width: 31rpx;
+  height: 26rpx;
+}
+
+.signalbgc0 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_0.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc1 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_1.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc2 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_2.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc3 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_3.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc4 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_4.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalbgc5 {
+  width: 63rpx;
+  height: 26rpx;
+  background-image: url('http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/piledetailsignal/pilesignal_5.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+}
+
+.signalitem {
+  display: flex;
+  background: #fff;
+}
+
+.signal-label {
+  flex: 0 0 200rpx;
+  font-size: 34rpx;
+  padding: 20rpx 0 27rpx 40rpx;
+}
+
+.signalwrapper {
+  flex: 1;
+}
+
+/* 868926034706728 */
+
+.signalwrapper .abc {
+  display: flex;
+  padding: 27rpx 0 27rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signalwrapper .abc .qqn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signalwrapper .querysignal {
+  font-size: 28rpx;
+  color: #32cb60;
+  position: relative;
+  margin-right: 40rpx;
+  padding-left: 35rpx;
+}
+
+.signalwrapper .querysignal:before {
+  content: '';
+  width: 2rpx;
+  height: 40rpx;
+  background: #f7f7f7;
+  position: absolute;
+  top: 2rpx;
+  left: 0rpx;
+}
+
+.signalinfo {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 40rpx;
+}
+
+/*保存按钮的样式*/
+
+.savePoint {
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #24c771;
+  margin-top: 90rpx;
+  border-radius: 80rpx;
+}
+
+.savePointDown {
+  position: relative;
+  top: 6rpx;
+}

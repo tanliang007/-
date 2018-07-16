@@ -1,0 +1,50 @@
+<!--pages/pilepoint-list/index.wxml-->
+<view class='manager'>
+  <view class='manager-wrapper'>
+    <view class='logpic'>
+      <image class='logpic-log' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/sitelog.png'></image>
+    </view>
+    <view class='content'>
+      <view class='address'>{{sitedetail.name}}</view>
+      <view class='specifiaddr'>{{sitedetail.address}}</view>
+      <view class='time&admin'>
+        <text style='margin-right:15rpx;'>充电费:{{sitedetail.price}}</text>
+        <text wx:if="{{sitedetail.landowner}}">管理员账号:{{sitedetail.landowner}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='pilelist' wx:for="{{pilepointList}}">
+  <view style='padding: 10rpx 0 10rpx 40rpx;background:#fff;'>
+    <view class='serialnum'>
+      <text class='serialnum-txt'>编号</text>
+      <!--等接口完善  -->
+      <text class='serialnum-txt2'>{{item.pileNo}}</text>
+    </view>
+    <view class='serialnum'>
+      <text class='serialnum-txt'>地址</text>
+      <!--等接口完善  -->
+      <text class='serialnum-txt2'>{{item.location}}</text>
+    </view>
+    <view class='addr'>
+      <text class='addr-txt'></text>
+      <view class='addr-txt2'>
+        <span class='kongxian'>
+          <span></span> 空闲{{item.avaliable}}个
+        </span>
+        <span class='zaichong'>
+          <span></span> 共{{item.total}}个
+        </span>
+				<view class='signalbgc{{item.signal}}'></view>	
+      </view>
+    </view>
+  </view>
+</view>
+
+<view hidden="{{haspilepointList}}" class='jiancontainer'>
+  <image class='jianshepic' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/nosite.png'></image>
+  <view class='jianshe'>您还没有建立桩点哦~快添加吧</view>
+</view>
+
+<navigator class='tosite' url='../pile-create/index?siteId={{siteId}}&sitelatitude={{sitelatitude}}&sitelongitude={{sitelongitude}}' open-type="navigate" hover-class="tosite-hover">添加新桩点</navigator>

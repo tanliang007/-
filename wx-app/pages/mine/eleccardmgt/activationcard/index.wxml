@@ -1,0 +1,41 @@
+<!--pages/mine/eleccardmgt/activationcard/index.wxml-->
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='sitename'>
+    <label class='sitename-label'>充电卡号</label>
+    <input class="sitename-input" value='{{cardNo}}' name="cardNo" placeholder="请输入卡号" type="number" maxlength="10" placeholder-class="input-placeholder" />
+			<!-- <view class='saocard' bindtap='saocard'>
+			<image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/newPointSao@3x.png  '></image>
+		</view> -->
+  </view>
+
+  <view class='keyphone'>
+    <label>预留号码</label>
+    <input class="contact-input" name="phone" placeholder="绑定预留号码" type="number" cursor-spacing='20' maxlength="11" placeholder-class="input-placeholder" bindinput="mobileInputEvent" />
+    <span bindtap="getVerificationCode" id="{{VerificationCode?'contactgetcode':'countdownnow'}}" class="{{VerificationCode?'contactgetcode':'countdownnow'}}">{{time}}
+    </span>
+  </view>
+
+  <view class='code'>
+		<label>验证码</label>
+    <view class='codechild'>
+      <input class="code-input" name="captcha" placeholder="请输入验证码" type="number" cursor-spacing='20' placeholder-class="input-placeholder" />
+    </view>
+  </view>
+
+  <view class='powerrate'>
+    <label class='powerrate-label'>激活金</label>
+    <picker class='powerrate-picker' id='region' mode="selector" range='{{Activationtypelist}}'  range-key="{{'showtext'}}"   bindchange="bindPowerChange">
+      <view class='powerrateWrapper'>
+        <input disabled="true" value='{{showActivation}}' class="powerrate-input" placeholder="请选择金额" placeholder-class="input-placeholder" />
+        <view class='unit'>
+          <text>元/小时</text>
+          <label class='iconfont icon-youjiantou'></label>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+  <button hover-class='mysubmitdown' class="mysubmit" formType="submit">激活 </button>
+
+</form>

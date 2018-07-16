@@ -1,0 +1,8 @@
+<!--pages/index/rob-pileguide/investpile/robpilesuccess/index.wxml-->
+<view style='text-align:center;'>
+	<image class='site' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/robpilepic.png'></image>
+	<view class='text1'>你已成功抢注!</view>
+	<view class='text2'>恭喜你成为桩主,次日0点开始计算您的分润</view>
+</view>
+ <navigator class='back' url="/pages/index/index" open-type="redirect" hover-class="back-hover">确定</navigator>
+

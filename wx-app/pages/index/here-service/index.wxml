@@ -1,0 +1,17 @@
+<!--pages/index/here-service/index.wxml-->
+<view class='buttonfather'>
+  <button class='button' open-type="contact" style='margin-left:15rpx;'>在线客服</button>
+</view>
+<view>
+  <view class='ques'>常见问题</view>
+  <view class='manager' wx:for="{{helpJson}}" wx:key="{{item.asktxt}}">
+    <view bindtap='switchDrop' data-index="{{index}}" class='askwrapper'>
+      <view class='askwrappertxt'> {{item.asktxt}}</view>
+      <view class='iconfont   {{item.istap?"icon-up":"icon-down"}}'></view>
+    </view>
+    <view wx:if="{{item.istap}}" class='answerwrapper'>
+			<text>{{item.answertext }}</text>
+		</view>
+  </view>
+</view>
+<view bindtap='phone' class='phone'>客服电话</view>

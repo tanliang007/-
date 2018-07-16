@@ -1,0 +1,16 @@
+<!--pages/authorization/index.wxml-->
+<view wx:if="{{whetherthelogin}}"	>
+	<view class='logo'>
+		<image src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/loginLogo.png '></image>
+	</view>
+	<view class='info'>
+		<view class='info-hi'>Hi~请登录</view>
+		<view class='info-thank'>登录后这有电将为您更好的服务</view>
+	</view>
+ <button class='logobutton'  open-type="getUserInfo"  bindgetuserinfo='bindGetUserInfo'>微信新用户快速登录</button> 
+</view>
+
+<view wx:if="{{phoneBound}}">
+  <register bind:onRegisteSuccess="onRegisteSuccess" bind:shouldCloseRegistDialog="closeRegistDialog"></register>
+</view>
+

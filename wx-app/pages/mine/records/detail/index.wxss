@@ -1,0 +1,103 @@
+chos/* pages/charging-controls/order-details/index.wxss */
+
+page {
+  background-color: #f7f7f7;
+}
+
+.chargearea {
+  text-align: center;
+  padding-top: 20rpx;
+  background-color: #fff;
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.areaDtl {
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
+.moneywrapper {
+  padding: 10rpx 0 20rpx 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.rmb {
+  color: 333;
+  font-size:52rpx;
+  font-weight: bold;
+}
+
+.text {
+  color: 333;
+  font-size: 34rpx;
+}
+
+.common {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rpx 40rpx;
+  background-color: #fff;
+}
+
+.commonleft {
+  color: #828282;
+  font-size: 26rpx;
+}
+
+.commonright {
+  color: #bcbcbc;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.ordernum {
+  margin-top: 2rpx;
+  padding-top: 40rpx;
+  padding-bottom: 30rpx;
+}
+
+.readyTime {
+  padding-bottom: 30rpx;
+}
+
+.total {
+  padding-bottom: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.actualtime {
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.actualpay, .totalChild {
+  padding-bottom: 30rpx;
+}
+
+.cashback {
+  padding-bottom: 30rpx;
+}
+
+.recordback {
+  width: 350rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 40rpx;
+  color: #fff;
+  background-color: #24c771;
+  border-radius: 80rpx;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}

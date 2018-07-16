@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<!--临时调试-->
+<view class='header'>
+  <view style='width: 100rpx;margin-top:7rpx;' bindtap='navpersoncenter'>
+    <image class="user-avatar" src="{{avatarUrl}}" />
+  </view>
+  <view class='searcher' bindtap='searchNearby'>
+    <view class='searcher-wapper'>
+      <icon type="search" size="10" class='search-icon' />
+      <text class="{{searchhint?'search-hint':'search-change'}}">{{searchRes}}</text>
+    </view>
+  </view>
+  <view class='right-btn' bindtap='searchNearby'></view>
+</view>
+
+
+<view class='main'>
+  <map id='map' style="width: 100%; height: 100%;" longitude="{{longitude}}" latitude="{{latitude}}" show-location='{{true}}' controls="{{controls}}" bindcontroltap="onControlTap" bindmarkertap="markertap" bindtap="maptap" bindregionchange="onRegionChanged"
+    markers="{{markers}}">
+
+    <cover-view wx:if="{{condition}}" class='tip'>
+      <cover-view style='position:relative;'>
+        <cover-view class='tip-left' data-siteId="{{tapSiteDeail.id}}" bindtap='navTositedetail'>
+          <cover-view class='placenames'>
+            <cover-image class='placeicon' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/placeicon.png'></cover-image>
+            <cover-view class='placeicon-text'>
+              {{tapSiteDeail.name}}
+            </cover-view>
+          </cover-view>
+          <cover-view class='usage'>
+            <cover-view class='using'>空闲 {{tapSiteDeail.avaliable}}</cover-view>
+            <cover-view style='margin:0 30rpx;color:#f1f1f1;'>|</cover-view>
+            <cover-view class='total'>共 {{tapSiteDeail.total}}</cover-view>
+          </cover-view>
+          <cover-view class='detailaddr'>
+            {{tapSiteDeail.address}}
+          </cover-view>
+        </cover-view>
+
+        <cover-view class='tip-right' bindtap='navToSite'>
+          <cover-image class='navarrow' src='http://charge-pile.oss-cn-hangzhou.aliyuncs.com/icon/navarrow.png'></cover-image>
+          <cover-view>
+            {{tapSiteDeail.distance}}
+          </cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+
+       <!-- <cover-view style='position:relative;background:rgba(250, 87, 34, 0.8);height:70rpx;color:#fff;width:92%;margin:0 auto;overflow:hidden;'>
+      <cover-view class="marquee" style='left:{{abc}}px;'>
+        <cover-view   style="width:{{w}}px;display: inline-block;font-size:{{size}}px; ">{{title}}</cover-view>
+          <cover-view style="display: inline-block; width:{{space}}px;"></cover-view>  
+        <cover-view style="width:{{w}}px;display:inline-block;font-size:{{size}}px;">{{title}}</cover-view>
+      </cover-view>
+    </cover-view>   -->
+
+			
+
+  </map>
+
+</view>
